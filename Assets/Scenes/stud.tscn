@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://dt86y27c7m33o"]
+
+[ext_resource type="Texture2D" uid="uid://bac3a2k8mannv" path="res://Assets/Sprites/Stud Animation/coin_1.png" id="1_misrm"]
+[ext_resource type="Script" uid="uid://ds5wmi6tk0xmk" path="res://Assets/Scripts/stud.gd" id="1_st32h"]
+[ext_resource type="Texture2D" uid="uid://cc1slwh6kqa0s" path="res://Assets/Sprites/Stud Animation/coin_2.png" id="2_st32h"]
+[ext_resource type="Texture2D" uid="uid://dqbxipxjg4h3b" path="res://Assets/Sprites/Stud Animation/coin_3.png" id="3_hyp7p"]
+[ext_resource type="Texture2D" uid="uid://drxe6cqmn8i1e" path="res://Assets/Sprites/Stud Animation/coin_4.png" id="4_jmadv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rgwx4"]
+animations = [{
+"frames": [{
+"duration": 0.7,
+"texture": ExtResource("1_misrm")
+}, {
+"duration": 0.7,
+"texture": ExtResource("2_st32h")
+}, {
+"duration": 0.7,
+"texture": ExtResource("3_hyp7p")
+}, {
+"duration": 0.7,
+"texture": ExtResource("4_jmadv")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_st32h"]
+radius = 56.7409
+height = 324.244
+
+[node name="Stud" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_st32h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_rgwx4")
+animation = &"spin"
+autoplay = "spin"
+frame_progress = 0.531174
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+scale = Vector2(-0.493471, 0.154205)
+shape = SubResource("CapsuleShape2D_st32h")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
