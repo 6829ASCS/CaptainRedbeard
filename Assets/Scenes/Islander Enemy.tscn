@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=3 uid="uid://dhit22bo64ad6"]
+
+[ext_resource type="Script" uid="uid://cqkwpishl6jnw" path="res://Assets/Scripts/islander.gd" id="1_rk1qs"]
+[ext_resource type="Texture2D" uid="uid://cdg8mmesk204t" path="res://Assets/Sprites/run2_centretest (2).png" id="2_d4jwm"]
+[ext_resource type="Texture2D" uid="uid://dqh1rvlcpcbp4" path="res://Assets/Sprites/islander_run2.png" id="3_en5mm"]
+[ext_resource type="PackedScene" uid="uid://x5j1geoh275x" path="res://Assets/Scenes/killzone.tscn" id="4_d4jwm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pl4on"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d4jwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_en5mm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vuf7w"]
+radius = 78.0
+height = 266.0
+
+[sub_resource type="GDScript" id="GDScript_d4jwm"]
+script/source = "extends Area2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hoaes"]
+radius = 8.0
+height = 144.0
+
+[node name="Islander" type="Node2D"]
+script = ExtResource("1_rk1qs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.55, 0.55)
+sprite_frames = SubResource("SpriteFrames_pl4on")
+frame = 1
+frame_progress = 0.0527367
+flip_h = true
+
+[node name="Killzone" parent="." instance=ExtResource("4_d4jwm")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("CapsuleShape2D_vuf7w")
+
+[node name="StompArea" type="Area2D" parent="."]
+position = Vector2(0, -152)
+rotation = 1.5708
+collision_mask = 2
+script = SubResource("GDScript_d4jwm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StompArea"]
+shape = SubResource("CapsuleShape2D_hoaes")
+
+[connection signal="body_entered" from="StompArea" to="." method="_on_stomp_area_body_entered"]

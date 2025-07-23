@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://cgonh33bfd4ar"]
+
+[ext_resource type="Script" uid="uid://cqkwpishl6jnw" path="res://Assets/Scripts/islander.gd" id="1_hoaes"]
+[ext_resource type="Texture2D" uid="uid://cdg8mmesk204t" path="res://Assets/Sprites/run2_centretest (2).png" id="1_l7di8"]
+[ext_resource type="Texture2D" uid="uid://dqh1rvlcpcbp4" path="res://Assets/Sprites/islander_run2.png" id="2_l7di8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pl4on"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_l7di8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_l7di8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vuf7w"]
+radius = 78.0
+height = 266.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hoaes"]
+radius = 8.0
+height = 160.0
+
+[node name="Islander Enemy" type="Node2D"]
+script = ExtResource("1_hoaes")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.55, 0.55)
+sprite_frames = SubResource("SpriteFrames_pl4on")
+frame = 1
+frame_progress = 0.0527367
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_vuf7w")
+
+[node name="StompDetector" type="Area2D" parent="."]
+position = Vector2(0, -152)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StompDetector"]
+shape = SubResource("CapsuleShape2D_hoaes")

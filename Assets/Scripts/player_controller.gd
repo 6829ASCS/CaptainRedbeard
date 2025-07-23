@@ -37,6 +37,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed * speed_multiplier)
 		animated_sprite_2d.play("idle")
-	
-	
+			
 	move_and_slide()
+
+func bounce_after_stomp():
+	velocity.y = -1500

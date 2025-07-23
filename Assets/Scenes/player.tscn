@@ -40,7 +40,7 @@ jump_power = 70.0
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -3)
 zoom = Vector2(0.4, 0.4)
-limit_bottom = 1415
+limit_bottom = 300
 position_smoothing_enabled = true
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -48,10 +48,9 @@ position_smoothing_enabled = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
 scale = Vector2(0.55, 0.55)
 sprite_frames = SubResource("SpriteFrames_w3t24")
-animation = &"idle"
-frame_progress = 0.656025
+animation = &"run"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="PlayerCollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2.38419e-07)
 scale = Vector2(10, 10)
 shape = SubResource("CapsuleShape2D_7dd06")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dmcgl8ob8xsh"]
+[gd_scene load_steps=14 format=3 uid="uid://dmcgl8ob8xsh"]
 
 [ext_resource type="Texture2D" uid="uid://bj0jwi0j7je47" path="res://Assets/Sprites/tile2.png" id="1_04mx0"]
 [ext_resource type="Texture2D" uid="uid://dofwqlbdpc30u" path="res://Assets/Sprites/sky.png" id="1_au6af"]
@@ -10,46 +10,43 @@
 [ext_resource type="Texture2D" uid="uid://clx216wu81evj" path="res://Assets/Sprites/Map Components/bush.png" id="5_deijv"]
 [ext_resource type="Texture2D" uid="uid://cklhtgl0gimm0" path="res://Assets/Sprites/Map Components/palm-tree.png" id="5_njbas"]
 [ext_resource type="Texture2D" uid="uid://csbvqeoru3vmh" path="res://Assets/Sprites/slope.png" id="6_uc6f5"]
+[ext_resource type="PackedScene" uid="uid://dhit22bo64ad6" path="res://Assets/Scenes/Islander Enemy.tscn" id="7_wonhx"]
 [ext_resource type="Texture2D" uid="uid://c1151v83b104q" path="res://Assets/Sprites/rock-face.png" id="12_wonhx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wi1m"]
 size = Vector2(6113, 311.75)
 
 [node name="Level_1" type="Node2D"]
-position = Vector2(1793, 1110)
 
 [node name="ParallaxBG" type="ParallaxBackground" parent="."]
 
 [node name="Sky layer" type="ParallaxLayer" parent="ParallaxBG"]
-position = Vector2(1793, 1110)
-motion_mirroring = Vector2(6400, 0)
+position = Vector2(0, -900)
+motion_mirroring = Vector2(7500, 0)
 
 [node name="sky_image" type="Sprite2D" parent="ParallaxBG/Sky layer"]
-position = Vector2(-508, -766)
-scale = Vector2(3, 3)
+scale = Vector2(3.5, 3.5)
 texture = ExtResource("1_au6af")
 
 [node name="sky_image2" type="Sprite2D" parent="ParallaxBG/Sky layer"]
-position = Vector2(2732, -767)
-scale = Vector2(3, 3)
+position = Vector2(3750, 0)
+scale = Vector2(3.5, 3.5)
 texture = ExtResource("1_au6af")
 
 [node name="Clouds layer" type="ParallaxLayer" parent="ParallaxBG"]
-position = Vector2(1793, 1110)
 motion_scale = Vector2(0.5, 1)
 
 [node name="clouds" type="Sprite2D" parent="ParallaxBG/Clouds layer"]
-position = Vector2(277, -985)
+position = Vector2(1740, -1115)
 scale = Vector2(0.4, 0.448)
 texture = ExtResource("2_au6af")
 
 [node name="Rock layer" type="ParallaxLayer" parent="ParallaxBG"]
-position = Vector2(1822, 1067)
 motion_scale = Vector2(0.9, 1)
 
 [node name="RockReal" type="Sprite2D" parent="ParallaxBG/Rock layer"]
-position = Vector2(227, -184)
-rotation = 1.5708
+position = Vector2(-356, 959)
+rotation = -1.74533
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_au6af")
 centered = false
@@ -113,24 +110,27 @@ texture = ExtResource("4_c8ix6")
 position = Vector2(-607, -152)
 polygon = PackedVector2Array(16, 8, 136, 8, 136, -24, 120, -56, 104, -80, 64, -104, -56, -104, -88, -88, -128, -32, -136, -8, -136, 8)
 
+[node name="Islander" parent="." instance=ExtResource("7_wonhx")]
+position = Vector2(1536, -208)
+
 [node name="Player" parent="." instance=ExtResource("2_4muih")]
 position = Vector2(-137, -184)
 
 [node name="Node" type="Node" parent="."]
 
 [node name="Stud" parent="Node" instance=ExtResource("3_4muih")]
-position = Vector2(3313, 695)
+position = Vector2(1720, -573)
 
 [node name="Stud2" parent="Node" instance=ExtResource("3_4muih")]
-position = Vector2(3818, 684)
+position = Vector2(2225, -584)
 
 [node name="Stud3" parent="Node" instance=ExtResource("3_4muih")]
-position = Vector2(4332, 688)
+position = Vector2(2739, -580)
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
 
 [node name="Bush" type="Sprite2D" parent="StaticBody2D4"]
-position = Vector2(1144, -164)
+position = Vector2(1142, -150)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("5_deijv")
 
