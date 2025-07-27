@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsq576jgw4i0u"]
+
+[ext_resource type="PackedScene" uid="uid://4g3qhsx5k8g0" path="res://UI/health bar/health_bar.tscn" id="1_60nn1"]
+[ext_resource type="Texture2D" uid="uid://it5b1xhandyb" path="res://UI/health bar/heart1.png" id="2_gbkdh"]
+[ext_resource type="Texture2D" uid="uid://cvro8on7g1pvg" path="res://UI/health bar/heart0.png" id="3_8vpl5"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_gbkdh"]
+specular_shininess = 0.0
+
+[node name="GameScreen" type="CanvasLayer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(149, 81)
+scale = Vector2(216, 72)
+texture = SubResource("CanvasTexture_gbkdh")
+
+[node name="HealthBar" parent="." instance=ExtResource("1_60nn1")]
+position = Vector2(50, 50)
+heart1 = ExtResource("2_gbkdh")
+heart0 = ExtResource("3_8vpl5")

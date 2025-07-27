@@ -7,7 +7,13 @@ var speed_multiplier = 30.0
 var jump_multiplier = -30.0
 var direction = 0
 
-@onready var animated_sprite_2d = $Node2D/AnimatedSprite2D
+@onready var animated_sprite_2d: AnimatedSprite2D = $Node2D/AnimatedSprite2D
+
+var is_knockback = false
+var knockback_timer = 0.0
+const KNOCKBACK_FORCE = 2500.0
+const KNOCKBACK_DURATION = 0.2
+
 
 func _ready():
 	pass	
@@ -17,28 +23,40 @@ func _ready():
 
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = jump_power * jump_multiplier
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	direction = Input.get_axis("move_left", "move_right")
-	if direction:
-		velocity.x = direction * speed * speed_multiplier
-		animated_sprite_2d.play("run")
-		animated_sprite_2d.flip_h = true if direction < 0 else false
-
-		
+	if is_knockback:
+		knockback_timer -= delta
+		if knockback_timer <= 0:
+			is_knockback = false
 	else:
-		velocity.x = move_toward(velocity.x, 0, speed * speed_multiplier)
-		animated_sprite_2d.play("idle")
-			
+		if not is_on_floor():
+			velocity += get_gravity() * delta
+
+		if Input.is_action_just_pressed("jump") and is_on_floor():
+			velocity.y = jump_power * jump_multiplier
+
+		direction = Input.get_axis("move_left", "move_right")
+		if direction:
+			velocity.x = direction * speed * speed_multiplier
+			animated_sprite_2d.play("run")
+			animated_sprite_2d.flip_h = direction < 0
+		else:
+			velocity.x = move_toward(velocity.x, 0, speed * speed_multiplier)
+			animated_sprite_2d.play("idle")
+
 	move_and_slide()
+
 
 func bounce_after_stomp():
 	velocity.y = -1500
+
+func apply_knockback(from_position: Vector2):
+	print("Knockback applied from:", from_position)
+	var direction = (global_position - from_position).normalized()
+
+	# Add upward force regardless of angle
+	var knockback = direction * KNOCKBACK_FORCE
+	knockback.y = -abs(KNOCKBACK_FORCE * 0.3)  # Force upward component
+
+	velocity = knockback
+	is_knockback = true
+	knockback_timer = KNOCKBACK_DURATION

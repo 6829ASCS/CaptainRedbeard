@@ -1,12 +1,25 @@
-[gd_scene load_steps=9 format=3 uid="uid://dhit22bo64ad6"]
+[gd_scene load_steps=12 format=3 uid="uid://dhit22bo64ad6"]
 
 [ext_resource type="Script" uid="uid://cqkwpishl6jnw" path="res://Assets/Scripts/islander.gd" id="1_rk1qs"]
 [ext_resource type="Texture2D" uid="uid://cdg8mmesk204t" path="res://Assets/Sprites/run2_centretest (2).png" id="2_d4jwm"]
+[ext_resource type="Texture2D" uid="uid://2xoeqqr5ue1r" path="res://Assets/Sprites/islander_dying_1.png" id="2_pg6wo"]
 [ext_resource type="Texture2D" uid="uid://dqh1rvlcpcbp4" path="res://Assets/Sprites/islander_run2.png" id="3_en5mm"]
+[ext_resource type="Texture2D" uid="uid://bkwkr48ekkja7" path="res://Assets/Sprites/islander_dying_2.png" id="3_mbpik"]
 [ext_resource type="PackedScene" uid="uid://x5j1geoh275x" path="res://Assets/Scenes/killzone.tscn" id="4_d4jwm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pl4on"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pg6wo")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_mbpik")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_d4jwm")
@@ -18,6 +31,10 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pg6wo"]
+radius = 64.0
+height = 304.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vuf7w"]
 radius = 78.0
@@ -47,9 +64,14 @@ script = ExtResource("1_rk1qs")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.55, 0.55)
 sprite_frames = SubResource("SpriteFrames_pl4on")
-frame = 1
-frame_progress = 0.0527367
 flip_h = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_pg6wo")
+debug_color = Color(0.899271, 0.0609229, 0.744768, 0.42)
 
 [node name="Killzone" parent="." instance=ExtResource("4_d4jwm")]
 

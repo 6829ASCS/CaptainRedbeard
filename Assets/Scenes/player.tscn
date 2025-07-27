@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dn6q35angxesc"]
+[gd_scene load_steps=8 format=3 uid="uid://dn6q35angxesc"]
 
 [ext_resource type="Script" uid="uid://kw2cuwugdkfa" path="res://Assets/Scripts/player_controller.gd" id="1_7dd06"]
 [ext_resource type="Texture2D" uid="uid://btscafcvyervh" path="res://Assets/Sprites/idle_centretest.png" id="2_t1xgp"]
+[ext_resource type="Texture2D" uid="uid://cvro8on7g1pvg" path="res://UI/health bar/heart0.png" id="3_23lac"]
 [ext_resource type="Texture2D" uid="uid://bwnywpob78k3j" path="res://Assets/Sprites/run1_centretest.png" id="3_t1xgp"]
 [ext_resource type="Texture2D" uid="uid://7w3qy08boo45" path="res://Assets/Sprites/run2_centretest.png" id="4_23lac"]
 
@@ -13,6 +14,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("3_23lac")
+}],
+"loop": false,
+"name": &"knockback",
 "speed": 5.0
 }, {
 "frames": [{
@@ -48,7 +57,7 @@ position_smoothing_enabled = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
 scale = Vector2(0.55, 0.55)
 sprite_frames = SubResource("SpriteFrames_w3t24")
-animation = &"run"
+animation = &"knockback"
 
 [node name="PlayerCollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2.38419e-07)

@@ -15,6 +15,10 @@ run/main_scene="uid://dmcgl8ob8xsh"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+HealthManager="*res://Assets/Scripts/health_manager.gd"
+
 [display]
 
 window/size/viewport_width=1080
