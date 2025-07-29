@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 HealthManager="*res://Assets/Scripts/health_manager.gd"
+ScoreCounter="*res://Assets/Scripts/score_counter.gd"
 
 [display]
 

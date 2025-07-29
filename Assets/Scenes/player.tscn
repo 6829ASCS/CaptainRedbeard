@@ -40,7 +40,7 @@ animations = [{
 radius = 7.7
 height = 38.2
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
 script = ExtResource("1_7dd06")
 speed = 50.0
@@ -57,7 +57,7 @@ position_smoothing_enabled = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
 scale = Vector2(0.55, 0.55)
 sprite_frames = SubResource("SpriteFrames_w3t24")
-animation = &"knockback"
+animation = &"idle"
 
 [node name="PlayerCollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2.38419e-07)

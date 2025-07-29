@@ -1,5 +1,7 @@
 extends Area2D
 
 func _on_body_entered(body):
-	print("+1 coin")
-	queue_free()
+	if body.is_in_group("Player"):
+		print("+1 coin")
+		ScoreCounter.score = ScoreCounter.score + 1
+		queue_free()

@@ -4,20 +4,17 @@
 [ext_resource type="Script" uid="uid://cjwd3v58nxb17" path="res://UI/health bar/health_bar.gd" id="1_by8vq"]
 
 [node name="HealthBar" type="Node2D"]
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_by8vq")
 
 [node name="Heart1" type="Sprite2D" parent="."]
-position = Vector2(112, 104)
-scale = Vector2(0.3, 0.3)
+position = Vector2(80, 80)
 texture = ExtResource("1_8qm28")
 
 [node name="Heart2" type="Sprite2D" parent="."]
-position = Vector2(335, 104)
-scale = Vector2(0.3, 0.3)
+position = Vector2(184, 80)
 texture = ExtResource("1_8qm28")
 
 [node name="Heart3" type="Sprite2D" parent="."]
-position = Vector2(559, 104)
-scale = Vector2(0.3, 0.3)
+position = Vector2(288, 80)
 texture = ExtResource("1_8qm28")
