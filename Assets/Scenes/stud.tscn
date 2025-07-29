@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://dt86y27c7m33o"]
+[gd_scene load_steps=11 format=3 uid="uid://dt86y27c7m33o"]
 
 [ext_resource type="Texture2D" uid="uid://bac3a2k8mannv" path="res://Assets/Sprites/Stud Animation/coin_1.png" id="1_misrm"]
 [ext_resource type="Script" uid="uid://ds5wmi6tk0xmk" path="res://Assets/Scripts/stud.gd" id="1_st32h"]
 [ext_resource type="Texture2D" uid="uid://cc1slwh6kqa0s" path="res://Assets/Sprites/Stud Animation/coin_2.png" id="2_st32h"]
 [ext_resource type="Texture2D" uid="uid://dqbxipxjg4h3b" path="res://Assets/Sprites/Stud Animation/coin_3.png" id="3_hyp7p"]
 [ext_resource type="Texture2D" uid="uid://drxe6cqmn8i1e" path="res://Assets/Sprites/Stud Animation/coin_4.png" id="4_jmadv"]
+[ext_resource type="Texture2D" uid="uid://2wlipqxak0lr" path="res://Assets/Sprites/Stud Animation/stud1.png" id="6_rgwx4"]
+[ext_resource type="Texture2D" uid="uid://bl6s03wbj03yb" path="res://Assets/Sprites/Stud Animation/stud2.png" id="7_237kc"]
+[ext_resource type="Texture2D" uid="uid://bl24g0m1iu216" path="res://Assets/Sprites/Stud Animation/stud3.png" id="8_2loac"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rgwx4"]
 animations = [{
@@ -24,26 +27,39 @@ animations = [{
 "loop": true,
 "name": &"spin",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_rgwx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_237kc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2loac")
+}],
+"loop": true,
+"name": &"spin_v2",
+"speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_st32h"]
-radius = 56.7409
-height = 324.244
+[sub_resource type="CircleShape2D" id="CircleShape2D_souf4"]
+radius = 32.0156
 
 [node name="Stud" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_st32h")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_rgwx4")
-animation = &"spin"
-autoplay = "spin"
-frame_progress = 0.531174
+animation = &"spin_v2"
+autoplay = "spin_v2"
+frame_progress = 0.559198
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -6)
-scale = Vector2(-0.493471, 0.154205)
-shape = SubResource("CapsuleShape2D_st32h")
+shape = SubResource("CircleShape2D_souf4")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

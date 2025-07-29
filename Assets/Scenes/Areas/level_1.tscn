@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dmcgl8ob8xsh"]
+[gd_scene load_steps=16 format=3 uid="uid://dmcgl8ob8xsh"]
 
 [ext_resource type="Texture2D" uid="uid://bj0jwi0j7je47" path="res://Assets/Sprites/tile2.png" id="1_04mx0"]
 [ext_resource type="Texture2D" uid="uid://dofwqlbdpc30u" path="res://Assets/Sprites/sky.png" id="1_au6af"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dhit22bo64ad6" path="res://Assets/Scenes/Islander Enemy.tscn" id="7_wonhx"]
 [ext_resource type="Texture2D" uid="uid://c1151v83b104q" path="res://Assets/Sprites/rock-face.png" id="12_wonhx"]
 [ext_resource type="PackedScene" uid="uid://bsq576jgw4i0u" path="res://UI/game_screen.tscn" id="13_tdti5"]
+[ext_resource type="AudioStream" uid="uid://buhr35qvpyhln" path="res://Assets/Audios/Tropical Loop for a Game.wav" id="13_w3oxo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8wi1m"]
 size = Vector2(6113, 311.75)
@@ -128,6 +129,15 @@ position = Vector2(2225, -584)
 [node name="Stud3" parent="Node" instance=ExtResource("3_4muih")]
 position = Vector2(2739, -580)
 
+[node name="Stud4" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(708, -225)
+
+[node name="Stud5" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(884, -219)
+
+[node name="Stud6" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(3134, -238)
+
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
 
 [node name="Bush" type="Sprite2D" parent="StaticBody2D4"]
@@ -153,5 +163,11 @@ texture = ExtResource("12_wonhx")
 position = Vector2(-601, -269)
 scale = Vector2(1.2, 1.2)
 polygon = PackedVector2Array(258.333, 233.333, 257.5, 216.667, 200, 200.833, 192.5, 100.833, 146.667, 100.833, 138.333, -20, 87.4999, -20, 84.9999, -127.5, 34.9999, -128.333, 36.6667, -603.333, -70.8333, -601.667, -70, -134.167, -69.1667, 231.667)
+
+[node name="Soundtrack" type="Node" parent="."]
+
+[node name="TropicalLoopForAGame" type="AudioStreamPlayer" parent="Soundtrack"]
+stream = ExtResource("13_w3oxo")
+autoplay = true
 
 [node name="GameScreen" parent="." instance=ExtResource("13_tdti5")]

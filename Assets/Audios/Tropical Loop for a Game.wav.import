@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://buhr35qvpyhln"
+path="res://.godot/imported/Tropical Loop for a Game.wav-958b4f1a4a2020fb3d5902f052a1868b.sample"
+
+[deps]
+
+source_file="res://Assets/Audios/Tropical Loop for a Game.wav"
+dest_files=["res://.godot/imported/Tropical Loop for a Game.wav-958b4f1a4a2020fb3d5902f052a1868b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
