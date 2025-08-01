@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://2ns2q5k8q8o6"]
+
+[ext_resource type="Shader" uid="uid://bq8xmawodd6jp" path="res://Assets/Shaders/death_shader.gdshader" id="1_g3vux"]
+[ext_resource type="Script" uid="uid://bedbxpmw248b" path="res://Assets/Scenes/death_screen.gd" id="1_urn1v"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_urn1v"]
+shader = ExtResource("1_g3vux")
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_urn1v")
+
+[node name="ScreenOverlay" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_urn1v")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

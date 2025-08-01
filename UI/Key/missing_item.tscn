@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs4au5mh4uaqf"]
+
+[ext_resource type="Script" uid="uid://t7spayt16h0y" path="res://UI/Key/missing_item.gd" id="1_espwq"]
+[ext_resource type="Texture2D" uid="uid://4h64jd84n5df" path="res://UI/Key/key0.png" id="2_w54yq"]
+[ext_resource type="Texture2D" uid="uid://c8s0xthqbwegv" path="res://UI/Key/key1.png" id="3_8c4qn"]
+
+[node name="Key GUI" type="Node2D"]
+script = ExtResource("1_espwq")
+key0 = ExtResource("2_w54yq")
+key1 = ExtResource("3_8c4qn")
+
+[node name="Key_Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_w54yq")

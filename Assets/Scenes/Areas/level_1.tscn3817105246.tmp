@@ -1,0 +1,176 @@
+[gd_scene load_steps=18 format=3 uid="uid://dmcgl8ob8xsh"]
+
+[ext_resource type="Texture2D" uid="uid://bj0jwi0j7je47" path="res://Assets/Sprites/tile2.png" id="1_04mx0"]
+[ext_resource type="Texture2D" uid="uid://dofwqlbdpc30u" path="res://Assets/Sprites/sky.png" id="1_au6af"]
+[ext_resource type="PackedScene" uid="uid://dn6q35angxesc" path="res://Assets/Scenes/player.tscn" id="2_4muih"]
+[ext_resource type="Texture2D" uid="uid://dbv6p3wb8cgun" path="res://Assets/Sprites/clouds.png" id="2_au6af"]
+[ext_resource type="PackedScene" uid="uid://dt86y27c7m33o" path="res://Assets/Scenes/stud.tscn" id="3_4muih"]
+[ext_resource type="Texture2D" uid="uid://b2a2hylwmimm5" path="res://Assets/Sprites/Untitled design (74).png" id="3_w3oxo"]
+[ext_resource type="Texture2D" uid="uid://br31vbv6htgr3" path="res://Assets/Sprites/Map Components/rock.png" id="4_c8ix6"]
+[ext_resource type="Texture2D" uid="uid://clx216wu81evj" path="res://Assets/Sprites/Map Components/bush.png" id="5_deijv"]
+[ext_resource type="Texture2D" uid="uid://cklhtgl0gimm0" path="res://Assets/Sprites/Map Components/palm-tree.png" id="5_njbas"]
+[ext_resource type="Texture2D" uid="uid://csbvqeoru3vmh" path="res://Assets/Sprites/slope.png" id="6_uc6f5"]
+[ext_resource type="PackedScene" uid="uid://dhit22bo64ad6" path="res://Assets/Scenes/Islander Enemy.tscn" id="7_wonhx"]
+[ext_resource type="Texture2D" uid="uid://c1151v83b104q" path="res://Assets/Sprites/rock-face.png" id="12_wonhx"]
+[ext_resource type="Script" uid="uid://dcjv184o0orkr" path="res://Assets/Scenes/background_music.gd" id="13_k0i4c"]
+[ext_resource type="PackedScene" uid="uid://bsq576jgw4i0u" path="res://UI/game_screen.tscn" id="13_tdti5"]
+[ext_resource type="PackedScene" uid="uid://cb8iss0d6tphg" path="res://Assets/Scenes/map_item.tscn" id="16_5bg1d"]
+[ext_resource type="PackedScene" uid="uid://2ns2q5k8q8o6" path="res://Assets/Scenes/death_screen.tscn" id="16_k0i4c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wi1m"]
+size = Vector2(6113, 311.75)
+
+[node name="Level_1" type="Node2D"]
+
+[node name="ParallaxBG" type="ParallaxBackground" parent="."]
+
+[node name="Sky layer" type="ParallaxLayer" parent="ParallaxBG"]
+position = Vector2(0, -900)
+motion_mirroring = Vector2(7500, 0)
+
+[node name="sky_image" type="Sprite2D" parent="ParallaxBG/Sky layer"]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_au6af")
+
+[node name="sky_image2" type="Sprite2D" parent="ParallaxBG/Sky layer"]
+position = Vector2(3750, 0)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_au6af")
+
+[node name="Clouds layer" type="ParallaxLayer" parent="ParallaxBG"]
+motion_scale = Vector2(0.5, 1)
+
+[node name="clouds" type="Sprite2D" parent="ParallaxBG/Clouds layer"]
+position = Vector2(1740, -1115)
+scale = Vector2(0.4, 0.448)
+texture = ExtResource("2_au6af")
+
+[node name="Rock layer" type="ParallaxLayer" parent="ParallaxBG"]
+motion_scale = Vector2(0.9, 1)
+
+[node name="RockReal" type="Sprite2D" parent="ParallaxBG/Rock layer"]
+position = Vector2(-676, -588)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_w3oxo")
+centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-504, 624)
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(656, -472)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_04mx0")
+
+[node name="Sprite2D4" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(79, -472)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_04mx0")
+
+[node name="Sprite2D8" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-221, -471)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_04mx0")
+
+[node name="Sprite2D5" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(952, -472)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_04mx0")
+
+[node name="Sprite2D6" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1248, -472)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_04mx0")
+
+[node name="Sprite2D7" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(2466.38, -472)
+scale = Vector2(3.56947, 0.5)
+texture = ExtResource("1_04mx0")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(360, -472)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_04mx0")
+
+[node name="Slope" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-553, -478)
+scale = Vector2(0.78, 0.78)
+texture = ExtResource("6_uc6f5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2704.5, -471.125)
+shape = SubResource("RectangleShape2D_8wi1m")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(906, 150)
+
+[node name="Rock" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(-607, -208)
+scale = Vector2(0.97, 0.97)
+texture = ExtResource("4_c8ix6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+position = Vector2(-607, -152)
+polygon = PackedVector2Array(16, 8, 136, 8, 136, -24, 120, -56, 104, -80, 64, -104, -56, -104, -88, -88, -128, -32, -136, -8, -136, 8)
+
+[node name="Islander" parent="." instance=ExtResource("7_wonhx")]
+position = Vector2(1536, -208)
+
+[node name="Player" parent="." instance=ExtResource("2_4muih")]
+position = Vector2(-137, -184)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Stud" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(1720, -573)
+
+[node name="Stud2" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(2225, -584)
+
+[node name="Stud3" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(2739, -580)
+
+[node name="Stud4" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(708, -225)
+
+[node name="Stud5" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(884, -219)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="Bush" type="Sprite2D" parent="StaticBody2D4"]
+position = Vector2(1142, -150)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_deijv")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="Palm-tree" type="Sprite2D" parent="StaticBody2D3"]
+position = Vector2(568, -664)
+scale = Vector2(2.8, 2.8)
+texture = ExtResource("5_njbas")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+
+[node name="Rock-face" type="Sprite2D" parent="StaticBody2D5"]
+position = Vector2(-601, -269)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("12_wonhx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D5"]
+position = Vector2(-601, -269)
+scale = Vector2(1.2, 1.2)
+polygon = PackedVector2Array(258.333, 233.333, 257.5, 216.667, 200, 200.833, 192.5, 100.833, 146.667, 100.833, 138.333, -20, 87.4999, -20, 84.9999, -127.5, 34.9999, -128.333, 36.6667, -603.333, -70.8333, -601.667, -70, -134.167, -69.1667, 231.667)
+
+[node name="Background Music" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("13_k0i4c")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Background Music"]
+
+[node name="GameScreen" parent="." instance=ExtResource("13_tdti5")]
+
+[node name="Map_Item" parent="." instance=ExtResource("16_5bg1d")]
+position = Vector2(3245, -211)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("16_k0i4c")]

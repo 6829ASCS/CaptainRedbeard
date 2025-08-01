@@ -6,7 +6,7 @@ const FLOAT_TARGET = Vector2(-8000, -15000)
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
 		print("+1 coin")
-		ScoreCounter.score = ScoreCounter.score + 1
+		Global.score = Global.score + 1
 		
 		$AudioStreamPlayer2D.stream = StudPickUpSound
 		$AudioStreamPlayer2D.play()

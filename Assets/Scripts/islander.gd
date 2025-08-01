@@ -2,8 +2,9 @@ extends Node2D
 
 @onready var anim = $AnimatedSprite2D
 @onready var collision_shape_2d: CollisionShape2D = $Killzone/CollisionShape2D
-
 @export var damage_amount : int = 1
+
+var DeathSound = preload("res://Assets/Audios/lego-breaking.mp3")
 
 var speed = 250
 var direction = 1  # Start moving right
@@ -31,6 +32,8 @@ func _process(delta):
 
 func _on_stomp_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player" and is_dead != true:	
+		$AudioStreamPlayer2D.stream = DeathSound
+		$AudioStreamPlayer2D.play()
 		print("dead enemy")
 		body.bounce_after_stomp()
 		is_dead = true

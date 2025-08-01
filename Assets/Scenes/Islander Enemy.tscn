@@ -1,11 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://dhit22bo64ad6"]
+[gd_scene load_steps=13 format=3 uid="uid://t34oyjg5ujj4"]
 
 [ext_resource type="Script" uid="uid://cqkwpishl6jnw" path="res://Assets/Scripts/islander.gd" id="1_rk1qs"]
-[ext_resource type="Texture2D" uid="uid://cdg8mmesk204t" path="res://Assets/Sprites/run2_centretest (2).png" id="2_d4jwm"]
 [ext_resource type="Texture2D" uid="uid://2xoeqqr5ue1r" path="res://Assets/Sprites/islander_dying_1.png" id="2_pg6wo"]
 [ext_resource type="Texture2D" uid="uid://dqh1rvlcpcbp4" path="res://Assets/Sprites/islander_run2.png" id="3_en5mm"]
 [ext_resource type="Texture2D" uid="uid://bkwkr48ekkja7" path="res://Assets/Sprites/islander_dying_2.png" id="3_mbpik"]
 [ext_resource type="PackedScene" uid="uid://x5j1geoh275x" path="res://Assets/Scenes/killzone.tscn" id="4_d4jwm"]
+[ext_resource type="Texture2D" uid="uid://dtc7ap5u8v5ye" path="res://Assets/Sprites/islander_run22.png" id="5_pg6wo"]
+[ext_resource type="AudioStream" uid="uid://l6l18qdttpr8" path="res://Assets/Audios/lego-breaking.mp3" id="7_mbpik"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pl4on"]
 animations = [{
@@ -22,10 +23,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_d4jwm")
+"texture": ExtResource("3_en5mm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_en5mm")
+"texture": ExtResource("5_pg6wo")
 }],
 "loop": true,
 "name": &"default",
@@ -50,20 +51,21 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 "
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hoaes"]
 radius = 8.0
-height = 144.0
+height = 132.0
 
-[node name="Islander" type="Node2D"]
+[node name="Islander" type="Node2D" groups=["Enemy"]]
 script = ExtResource("1_rk1qs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.55, 0.55)
 sprite_frames = SubResource("SpriteFrames_pl4on")
+frame_progress = 0.877214
 flip_h = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
@@ -86,5 +88,9 @@ script = SubResource("GDScript_d4jwm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StompArea"]
 shape = SubResource("CapsuleShape2D_hoaes")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_mbpik")
+max_distance = 4096.0
 
 [connection signal="body_entered" from="StompArea" to="." method="_on_stomp_area_body_entered"]

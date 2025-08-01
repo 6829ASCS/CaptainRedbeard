@@ -1,0 +1,115 @@
+[gd_scene load_steps=14 format=3 uid="uid://dn6q35angxesc"]
+
+[ext_resource type="Script" uid="uid://kw2cuwugdkfa" path="res://Assets/Scripts/player_controller.gd" id="1_7dd06"]
+[ext_resource type="Texture2D" uid="uid://ciah4aeel8qnu" path="res://Assets/Sprites/jump_down.png" id="2_ecf78"]
+[ext_resource type="Texture2D" uid="uid://cvro8on7g1pvg" path="res://UI/health bar/heart0.png" id="3_23lac"]
+[ext_resource type="Texture2D" uid="uid://cbt8yiqpatcxs" path="res://Assets/Sprites/redbeard_idle_v1.png" id="3_ecf78"]
+[ext_resource type="Texture2D" uid="uid://diu8mms28djws" path="res://Assets/Sprites/jump_up.png" id="4_vy5gb"]
+[ext_resource type="Texture2D" uid="uid://cvauvojgq2vv8" path="res://Assets/Sprites/sword_swing1.png" id="6_lerqx"]
+[ext_resource type="Texture2D" uid="uid://dx0r12qoqlu80" path="res://Assets/Sprites/sword_swing2.png" id="7_jp3cw"]
+[ext_resource type="Texture2D" uid="uid://citkv6fp8bw1b" path="res://Assets/Sprites/sword_swing3.png" id="8_ecf78"]
+[ext_resource type="Texture2D" uid="uid://2l1lopwqk0mg" path="res://Assets/Sprites/redbeard_run1.png" id="9_ecf78"]
+[ext_resource type="Texture2D" uid="uid://wlpn0558dkap" path="res://Assets/Sprites/redbeard_run2.png" id="10_vy5gb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vy5gb"]
+animations = [{
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("7_jp3cw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lerqx")
+}, {
+"duration": 0.3,
+"texture": ExtResource("7_jp3cw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ecf78")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w3t24"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ecf78")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ecf78")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_vy5gb")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("3_23lac")
+}],
+"loop": false,
+"name": &"knockback",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_ecf78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vy5gb")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7dd06"]
+radius = 7.7
+height = 38.2
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+collision_layer = 2
+script = ExtResource("1_7dd06")
+speed = 50.0
+jump_power = 70.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -3)
+zoom = Vector2(0.4, 0.4)
+limit_bottom = 300
+position_smoothing_enabled = true
+
+[node name="Node2D2" type="Node2D" parent="."]
+
+[node name="SwordAnimPlayer" type="AnimatedSprite2D" parent="Node2D2"]
+scale = Vector2(0.55, 0.55)
+sprite_frames = SubResource("SpriteFrames_vy5gb")
+autoplay = "default"
+frame = 2
+frame_progress = 1.0
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+scale = Vector2(0.55, 0.55)
+sprite_frames = SubResource("SpriteFrames_w3t24")
+animation = &"run"
+
+[node name="PlayerCollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.38419e-07)
+scale = Vector2(10, 10)
+shape = SubResource("CapsuleShape2D_7dd06")

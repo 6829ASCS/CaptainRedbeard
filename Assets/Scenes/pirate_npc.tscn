@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://u7hptmssmui8"]
+
+[ext_resource type="Texture2D" uid="uid://ct5xa4jc4a3qj" path="res://Assets/Sprites/npc_idle1.png" id="1_iwvra"]
+[ext_resource type="Texture2D" uid="uid://dofs71itbnrqk" path="res://Assets/Sprites/npc_idle2.png" id="2_l73gl"]
+[ext_resource type="Texture2D" uid="uid://b3xr2xsp54rcj" path="res://Assets/Sprites/npc_idle3.png" id="3_wgsdr"]
+[ext_resource type="Texture2D" uid="uid://cuvm153kg7mqt" path="res://Assets/Sprites/npc_wave1.png" id="4_71li5"]
+[ext_resource type="Texture2D" uid="uid://qlyth8pvanw" path="res://Assets/Sprites/npc_wave2.png" id="5_xgi08"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6io3t"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": ExtResource("1_iwvra")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_l73gl")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_wgsdr")
+}, {
+"duration": 8.0,
+"texture": ExtResource("1_iwvra")
+}, {
+"duration": 0.7,
+"texture": ExtResource("4_71li5")
+}, {
+"duration": 0.7,
+"texture": ExtResource("5_xgi08")
+}, {
+"duration": 0.7,
+"texture": ExtResource("4_71li5")
+}, {
+"duration": 0.7,
+"texture": ExtResource("5_xgi08")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Pirate NPC" type="Node2D"]
+scale = Vector2(0.55, 0.55)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6io3t")
+autoplay = "default"
+frame_progress = 0.271121
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
