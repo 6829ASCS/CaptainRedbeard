@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn3ndfw54lfel"
-path="res://.godot/imported/boat.png-1ccea7882788d7e7e617042069f90f74.ctex"
+uid="uid://bvltnbli5vuuq"
+path="res://.godot/imported/horizon_c.png-980198c47d8c61d02f0286579915b99c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/boat.png"
-dest_files=["res://.godot/imported/boat.png-1ccea7882788d7e7e617042069f90f74.ctex"]
+source_file="res://Assets/Sprites/Map Components/horizon_c.png"
+dest_files=["res://.godot/imported/horizon_c.png-980198c47d8c61d02f0286579915b99c.ctex"]
 
 [params]
 

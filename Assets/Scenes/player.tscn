@@ -103,7 +103,8 @@ jump_power = 70.0
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -3)
 zoom = Vector2(0.4, 0.4)
-limit_bottom = 300
+limit_left = -950
+limit_bottom = 235
 position_smoothing_enabled = true
 
 [node name="Sword" type="Area2D" parent="."]
@@ -125,9 +126,7 @@ polygon = PackedVector2Array(-48, 96, 8, 32, 56, -72, 24, -128, -24, -192, -104,
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
 scale = Vector2(0.55, 0.55)
 sprite_frames = SubResource("SpriteFrames_w3t24")
-animation = &"death"
-frame = 1
-frame_progress = 1.0
+animation = &"idle"
 
 [node name="PlayerCollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2.38419e-07)

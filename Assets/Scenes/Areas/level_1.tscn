@@ -1,177 +1,215 @@
-[gd_scene load_steps=25 format=3 uid="uid://dmcgl8ob8xsh"]
+[gd_scene load_steps=26 format=3 uid="uid://dmcgl8ob8xsh"]
 
-[ext_resource type="Texture2D" uid="uid://bj0jwi0j7je47" path="res://Assets/Sprites/tile2.png" id="1_04mx0"]
 [ext_resource type="Texture2D" uid="uid://dofwqlbdpc30u" path="res://Assets/Sprites/sky.png" id="1_au6af"]
 [ext_resource type="PackedScene" uid="uid://dn6q35angxesc" path="res://Assets/Scenes/player.tscn" id="2_4muih"]
 [ext_resource type="Texture2D" uid="uid://dbv6p3wb8cgun" path="res://Assets/Sprites/clouds.png" id="2_au6af"]
 [ext_resource type="PackedScene" uid="uid://dt86y27c7m33o" path="res://Assets/Scenes/stud.tscn" id="3_4muih"]
-[ext_resource type="Texture2D" uid="uid://b2a2hylwmimm5" path="res://Assets/Sprites/Untitled design (74).png" id="3_w3oxo"]
 [ext_resource type="Texture2D" uid="uid://br31vbv6htgr3" path="res://Assets/Sprites/Map Components/rock.png" id="4_c8ix6"]
-[ext_resource type="Texture2D" uid="uid://clx216wu81evj" path="res://Assets/Sprites/Map Components/bush.png" id="5_deijv"]
-[ext_resource type="Texture2D" uid="uid://cklhtgl0gimm0" path="res://Assets/Sprites/Map Components/palm-tree.png" id="5_njbas"]
-[ext_resource type="Texture2D" uid="uid://csbvqeoru3vmh" path="res://Assets/Sprites/slope.png" id="6_uc6f5"]
+[ext_resource type="Texture2D" uid="uid://cgk8njyl73j12" path="res://Assets/Sprites/Map Components/sand_tile.png" id="6_20xqu"]
 [ext_resource type="PackedScene" uid="uid://t34oyjg5ujj4" path="res://Assets/Scenes/Islander Enemy.tscn" id="7_wonhx"]
-[ext_resource type="Texture2D" uid="uid://c1151v83b104q" path="res://Assets/Sprites/rock-face.png" id="12_wonhx"]
+[ext_resource type="Texture2D" uid="uid://cwmkfw3cnymgv" path="res://Assets/Sprites/Map Components/sky_sand_gradient.png" id="11_1qfdr"]
+[ext_resource type="Texture2D" uid="uid://dl0ooy7eij0ju" path="res://Assets/Sprites/Map Components/horizon_a.png" id="12_fwv0e"]
+[ext_resource type="Texture2D" uid="uid://bvltnbli5vuuq" path="res://Assets/Sprites/Map Components/horizon_c.png" id="13_383x3"]
 [ext_resource type="Script" uid="uid://dcjv184o0orkr" path="res://Assets/Scenes/background_music.gd" id="13_k0i4c"]
 [ext_resource type="PackedScene" uid="uid://bsq576jgw4i0u" path="res://UI/game_screen.tscn" id="13_tdti5"]
 [ext_resource type="PackedScene" uid="uid://cb8iss0d6tphg" path="res://Assets/Scenes/key.tscn" id="16_5bg1d"]
 [ext_resource type="PackedScene" uid="uid://2ns2q5k8q8o6" path="res://Assets/Scenes/death_screen.tscn" id="16_k0i4c"]
+[ext_resource type="Texture2D" uid="uid://c6tujej25sbap" path="res://Assets/Sprites/Map Components/sand_top_layer.png" id="17_6ykoq"]
 [ext_resource type="PackedScene" uid="uid://u7hptmssmui8" path="res://Assets/Scenes/pirate_npc.tscn" id="17_k0i4c"]
-[ext_resource type="Texture2D" uid="uid://d0jwbhsnqck06" path="res://Assets/Sprites/Map Components/brown1.png" id="18_88hay"]
-[ext_resource type="Texture2D" uid="uid://c1rpnrsfosowi" path="res://Assets/Sprites/Map Components/brown2.png" id="19_2vyia"]
-[ext_resource type="Texture2D" uid="uid://nhtn2mui3obm" path="res://Assets/Sprites/Map Components/brown3.png" id="20_20xqu"]
-[ext_resource type="Texture2D" uid="uid://2eau5uu02o7x" path="res://Assets/Sprites/Map Components/grass1.png" id="21_1qfdr"]
-[ext_resource type="Texture2D" uid="uid://k7uljwwihjlt" path="res://Assets/Sprites/Map Components/grass2.png" id="22_fwv0e"]
-[ext_resource type="Texture2D" uid="uid://dvjujwosblonw" path="res://Assets/Sprites/Map Components/grass3.png" id="23_383x3"]
+[ext_resource type="Texture2D" uid="uid://dwh462ev6li2h" path="res://Assets/Sprites/Map Components/yellow3.png" id="18_88hay"]
+[ext_resource type="Texture2D" uid="uid://chwhxx0si68tt" path="res://Assets/Sprites/Map Components/boat_in_water.png" id="18_p7eom"]
+[ext_resource type="Texture2D" uid="uid://movcfxj5iyeg" path="res://Assets/Sprites/Map Components/yellow2.png" id="19_2vyia"]
+[ext_resource type="Texture2D" uid="uid://ws1owyqkhce5" path="res://Assets/Sprites/Map Components/yellow1.png" id="20_20xqu"]
+[ext_resource type="Texture2D" uid="uid://pgadfoi1uybx" path="res://Assets/Sprites/download (5).png" id="21_y27wp"]
+[ext_resource type="Texture2D" uid="uid://bahrso3qvuxxo" path="res://Assets/Sprites/rock_face2.png" id="22_657dn"]
+[ext_resource type="Texture2D" uid="uid://3adv1kqymayd" path="res://Assets/Sprites/palm-tree2.png" id="23_2ilnm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wi1m"]
-size = Vector2(7240, 311.75)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8kx4"]
+size = Vector2(5551, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drcxs"]
+size = Vector2(55, 1436.02)
 
 [node name="Level_1" type="Node2D"]
 
-[node name="ParallaxBG" type="ParallaxBackground" parent="."]
+[node name="MAP" type="Node2D" parent="."]
 
-[node name="Sky layer" type="ParallaxLayer" parent="ParallaxBG"]
+[node name="ParallaxBG" type="ParallaxBackground" parent="MAP"]
+
+[node name="Sky layer" type="ParallaxLayer" parent="MAP/ParallaxBG"]
 position = Vector2(0, -900)
-motion_mirroring = Vector2(7500, 0)
+motion_mirroring = Vector2(6850, 0)
 
-[node name="sky_image" type="Sprite2D" parent="ParallaxBG/Sky layer"]
-scale = Vector2(3.5, 3.5)
+[node name="sky_image" type="Sprite2D" parent="MAP/ParallaxBG/Sky layer"]
+position = Vector2(343, 0)
+scale = Vector2(3.2, 3.2)
 texture = ExtResource("1_au6af")
 
-[node name="sky_image2" type="Sprite2D" parent="ParallaxBG/Sky layer"]
+[node name="sky_image2" type="Sprite2D" parent="MAP/ParallaxBG/Sky layer"]
 position = Vector2(3750, 0)
-scale = Vector2(3.5, 3.5)
+scale = Vector2(3.2, 3.2)
 texture = ExtResource("1_au6af")
 
-[node name="Clouds layer" type="ParallaxLayer" parent="ParallaxBG"]
+[node name="Clouds layer" type="ParallaxLayer" parent="MAP/ParallaxBG"]
 motion_scale = Vector2(0.5, 1)
 
-[node name="clouds" type="Sprite2D" parent="ParallaxBG/Clouds layer"]
+[node name="clouds" type="Sprite2D" parent="MAP/ParallaxBG/Clouds layer"]
 position = Vector2(1740, -1115)
 scale = Vector2(0.4, 0.448)
 texture = ExtResource("2_au6af")
 
-[node name="Rock layer" type="ParallaxLayer" parent="ParallaxBG"]
+[node name="Horizon" type="ParallaxLayer" parent="MAP/ParallaxBG"]
+position = Vector2(136, -8)
 motion_scale = Vector2(0.9, 1)
 
-[node name="RockReal" type="Sprite2D" parent="ParallaxBG/Rock layer"]
-position = Vector2(-676, -588)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("3_w3oxo")
-centered = false
+[node name="SkySandGradient" type="Sprite2D" parent="MAP/ParallaxBG/Horizon"]
+position = Vector2(2366.65, -243)
+scale = Vector2(6.90443, 0.261)
+texture = ExtResource("11_1qfdr")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-504, 624)
+[node name="Horizon" type="Sprite2D" parent="MAP/ParallaxBG/Horizon"]
+position = Vector2(-656, -24)
+scale = Vector2(3.8, 3.8)
+texture = ExtResource("12_fwv0e")
 
-[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(656, -472)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_04mx0")
+[node name="SandHorizon" type="Sprite2D" parent="MAP/ParallaxBG/Horizon"]
+position = Vector2(1340, 26)
+scale = Vector2(1.9, 1.9)
+texture = ExtResource("13_383x3")
 
-[node name="Sprite2D4" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(79, -472)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_04mx0")
+[node name="SandHorizon2" type="Sprite2D" parent="MAP/ParallaxBG/Horizon"]
+position = Vector2(3299, 26)
+scale = Vector2(1.9, 1.9)
+texture = ExtResource("13_383x3")
 
-[node name="Sprite2D8" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-221, -471)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_04mx0")
+[node name="Yellow1" type="Sprite2D" parent="MAP"]
+position = Vector2(3184, -640)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("20_20xqu")
 
-[node name="Sprite2D5" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(952, -472)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_04mx0")
+[node name="Yellow3" type="Sprite2D" parent="MAP"]
+position = Vector2(2848, -616)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("18_88hay")
 
-[node name="Sprite2D6" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(1248, -472)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_04mx0")
+[node name="Yellow2" type="Sprite2D" parent="MAP"]
+position = Vector2(2600, -648)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("19_2vyia")
 
-[node name="Sprite2D7" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(3575.38, -472)
-scale = Vector2(7.25998, 0.5)
-texture = ExtResource("1_04mx0")
+[node name="Area2D" type="Area2D" parent="MAP"]
+position = Vector2(-435, 14)
+scale = Vector2(1.8, 1.8)
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(360, -472)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_04mx0")
+[node name="StaticBody2D2" type="StaticBody2D" parent="MAP"]
 
-[node name="Slope" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-553, -478)
-scale = Vector2(0.78, 0.78)
-texture = ExtResource("6_uc6f5")
+[node name="SandTopLayer" type="Sprite2D" parent="MAP/StaticBody2D2"]
+position = Vector2(438, 6)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("17_6ykoq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(3268, -471.125)
-shape = SubResource("RectangleShape2D_8wi1m")
+[node name="SandTopLayer2" type="Sprite2D" parent="MAP/StaticBody2D2"]
+position = Vector2(1309, 6)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("17_6ykoq")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(906, 150)
+[node name="SandTopLayer3" type="Sprite2D" parent="MAP/StaticBody2D2"]
+position = Vector2(2178, 6)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("17_6ykoq")
 
-[node name="Rock" type="Sprite2D" parent="StaticBody2D2"]
-position = Vector2(-607, -208)
-scale = Vector2(0.97, 0.97)
+[node name="SandTopLayer4" type="Sprite2D" parent="MAP/StaticBody2D2"]
+position = Vector2(3054, 6)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("17_6ykoq")
+
+[node name="BoatInWater" type="Sprite2D" parent="MAP/StaticBody2D2"]
+position = Vector2(-445, 17)
+texture = ExtResource("18_p7eom")
+
+[node name="SandTexture2" type="Sprite2D" parent="MAP/StaticBody2D2"]
+position = Vector2(380.267, 362.624)
+rotation = -1.1507
+scale = Vector2(0.323232, 0.952658)
+texture = ExtResource("6_20xqu")
+
+[node name="SandTexture" type="Sprite2D" parent="MAP/StaticBody2D2"]
+position = Vector2(1176, 168.9)
+scale = Vector2(2.28906, 0.30293)
+texture = ExtResource("6_20xqu")
+
+[node name="SandTexture3" type="Sprite2D" parent="MAP/StaticBody2D2"]
+position = Vector2(2882, 168)
+scale = Vector2(1.04297, 0.30293)
+texture = ExtResource("6_20xqu")
+
+[node name="a" type="Node" parent="MAP"]
+
+[node name="Rock" type="StaticBody2D" parent="MAP/a"]
+
+[node name="Rock" type="Sprite2D" parent="MAP/a/Rock"]
+position = Vector2(1454, -54)
+scale = Vector2(0.47, 0.47)
 texture = ExtResource("4_c8ix6")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
-position = Vector2(-607, -152)
-polygon = PackedVector2Array(16, 8, 136, 8, 136, -24, 120, -56, 104, -80, 64, -104, -56, -104, -88, -88, -128, -32, -136, -8, -136, 8)
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MAP/a/Rock"]
+polygon = PackedVector2Array(1308, 14, 1308, -2, 1324, -53, 1358, -88, 1386, -99, 1386, -114, 1386, -114, 1520, -114, 1521, -103, 1527, -103, 1568, -82, 1586, -57, 1599, -5, 1600, 11)
+
+[node name="Rockface" type="StaticBody2D" parent="MAP/a"]
+
+[node name="rockface_p1" type="Sprite2D" parent="MAP/a/Rockface"]
+position = Vector2(-30.9999, 88)
+scale = Vector2(0.688, 0.688)
+texture = ExtResource("21_y27wp")
+
+[node name="rockface_p2" type="Sprite2D" parent="MAP/a/Rockface"]
+position = Vector2(459, -70)
+scale = Vector2(1.12, 1.12)
+texture = ExtResource("22_657dn")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MAP/a/Rockface"]
+position = Vector2(0, -65)
+polygon = PackedVector2Array(656, 113, 656, -47, 584, -47, 584, -224, 512, -224, 512, -312, 368, -312, 368, -224, 296, -224, 296, -48, 224, -48, 224, 113)
+
+[node name="Boundaries2" type="StaticBody2D" parent="MAP/a"]
+
+[node name="ground" type="CollisionShape2D" parent="MAP/a/Boundaries2"]
+position = Vector2(2776.5, 28)
+shape = SubResource("RectangleShape2D_i8kx4")
+
+[node name="left to boat" type="CollisionShape2D" parent="MAP/a/Boundaries2"]
+position = Vector2(4, -456)
+scale = Vector2(0.688, 0.688)
+shape = SubResource("RectangleShape2D_drcxs")
+
+[node name="Palm-tree" type="Sprite2D" parent="MAP/a"]
+position = Vector2(1840, -648)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("23_2ilnm")
 
 [node name="Islander" parent="." instance=ExtResource("7_wonhx")]
-position = Vector2(1536, -208)
+position = Vector2(2954, -203)
 
 [node name="Pirate NPC" parent="." instance=ExtResource("17_k0i4c")]
-position = Vector2(3893, -198)
+position = Vector2(4980, -182)
 scale = Vector2(-0.55, 0.55)
 
 [node name="Player" parent="." instance=ExtResource("2_4muih")]
-position = Vector2(-137, -184)
+position = Vector2(944, -187)
 
 [node name="Node" type="Node" parent="."]
 
-[node name="Stud" parent="Node" instance=ExtResource("3_4muih")]
-position = Vector2(1720, -573)
-
 [node name="Stud2" parent="Node" instance=ExtResource("3_4muih")]
-position = Vector2(2225, -584)
+position = Vector2(2370, -269)
 
 [node name="Stud3" parent="Node" instance=ExtResource("3_4muih")]
-position = Vector2(2739, -580)
+position = Vector2(2071, -269)
 
 [node name="Stud4" parent="Node" instance=ExtResource("3_4muih")]
-position = Vector2(708, -225)
+position = Vector2(450, -618)
 
 [node name="Stud5" parent="Node" instance=ExtResource("3_4muih")]
-position = Vector2(884, -219)
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
-
-[node name="Bush" type="Sprite2D" parent="StaticBody2D4"]
-position = Vector2(1142, -150)
-scale = Vector2(0.9, 0.9)
-texture = ExtResource("5_deijv")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-
-[node name="Palm-tree" type="Sprite2D" parent="StaticBody2D3"]
-position = Vector2(568, -664)
-scale = Vector2(2.8, 2.8)
-texture = ExtResource("5_njbas")
-
-[node name="StaticBody2D5" type="StaticBody2D" parent="."]
-
-[node name="Rock-face" type="Sprite2D" parent="StaticBody2D5"]
-position = Vector2(-601, -269)
-scale = Vector2(1.2, 1.2)
-texture = ExtResource("12_wonhx")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D5"]
-position = Vector2(-601, -269)
-scale = Vector2(1.2, 1.2)
-polygon = PackedVector2Array(258.333, 233.333, 257.5, 216.667, 200, 200.833, 192.5, 100.833, 146.667, 100.833, 138.333, -20, 87.4999, -20, 84.9999, -127.5, 34.9999, -128.333, 36.6667, -603.333, -70.8333, -601.667, -70, -134.167, -69.1667, 231.667)
+position = Vector2(1688, -269)
 
 [node name="Background Music" type="Node" parent="."]
 process_mode = 3
@@ -182,59 +220,6 @@ script = ExtResource("13_k0i4c")
 [node name="GameScreen" parent="." instance=ExtResource("13_tdti5")]
 
 [node name="Map_Item" parent="." instance=ExtResource("16_5bg1d")]
-position = Vector2(3245, -211)
+position = Vector2(4461, -190)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("16_k0i4c")]
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(5384, 135)
-
-[node name="Brown1" type="Sprite2D" parent="Area2D"]
-texture = ExtResource("18_88hay")
-
-[node name="Brown4" type="Sprite2D" parent="Area2D"]
-position = Vector2(764, 0)
-texture = ExtResource("18_88hay")
-
-[node name="Brown2" type="Sprite2D" parent="Area2D"]
-position = Vector2(255, 0)
-texture = ExtResource("19_2vyia")
-
-[node name="Brown3" type="Sprite2D" parent="Area2D"]
-position = Vector2(510, 0)
-texture = ExtResource("20_20xqu")
-
-[node name="Brown5" type="Sprite2D" parent="Area2D"]
-position = Vector2(0, 254)
-texture = ExtResource("18_88hay")
-flip_h = true
-
-[node name="Brown6" type="Sprite2D" parent="Area2D"]
-position = Vector2(764, 254)
-texture = ExtResource("18_88hay")
-flip_h = true
-
-[node name="Brown7" type="Sprite2D" parent="Area2D"]
-position = Vector2(255, 254)
-texture = ExtResource("19_2vyia")
-flip_h = true
-
-[node name="Brown8" type="Sprite2D" parent="Area2D"]
-position = Vector2(510, 254)
-texture = ExtResource("20_20xqu")
-flip_h = true
-
-[node name="Grass1" type="Sprite2D" parent="."]
-position = Vector2(5696, 8)
-scale = Vector2(1.8, 1.8)
-texture = ExtResource("21_1qfdr")
-
-[node name="Grass2" type="Sprite2D" parent="."]
-position = Vector2(5400, 8)
-scale = Vector2(1.8, 1.8)
-texture = ExtResource("22_fwv0e")
-
-[node name="Grass3" type="Sprite2D" parent="."]
-position = Vector2(5992, 8.00001)
-scale = Vector2(1.8, 1.8)
-texture = ExtResource("23_383x3")
