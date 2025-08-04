@@ -8,7 +8,8 @@ func _on_body_entered(body):
 
 		
 		$CollisionShape2D.set_deferred("disabled", true)
-	
+		$AudioStreamPlayer2D.play()
+
 		var tween = get_tree().create_tween()
 		var up_pos = global_position + Vector2(0, -300)
 		var down_pos = global_position + Vector2(0, -150)

@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://dtjgomd4u1ft8"]
+
+[ext_resource type="Texture2D" uid="uid://b7jo7b4nbkseu" path="res://UI/main menu/background.png" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://d3xbffgbed2xb" path="res://UI/main menu/level1.png" id="2_glbon"]
+[ext_resource type="Texture2D" uid="uid://bpv4iw1m08skg" path="res://UI/main menu/level2.png" id="3_nlkkf"]
+[ext_resource type="Script" uid="uid://ccrusfc1xuoym" path="res://level_menu_button.gd" id="3_qe12f"]
+[ext_resource type="Texture2D" uid="uid://dbyissgbnyppt" path="res://UI/main menu/level3.png" id="4_qe12f"]
+[ext_resource type="Texture2D" uid="uid://6itsu188u1eq" path="res://UI/main menu/redbeard.png" id="5_8qtwp"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(540, 360)
+texture = ExtResource("1_06t4h")
+
+[node name="Node2D" type="Node2D" parent="."]
+scale = Vector2(0.55, 0.55)
+
+[node name="Level 1 Button" type="TextureButton" parent="Node2D"]
+offset_left = 234.545
+offset_top = 363.636
+offset_right = 716.545
+offset_bottom = 1083.64
+texture_normal = ExtResource("2_glbon")
+script = ExtResource("3_qe12f")
+level_scene_path = "res://Assets/Scenes/Areas/level_1.tscn"
+
+[node name="Level 2 Button" type="TextureButton" parent="Node2D"]
+offset_left = 747.273
+offset_top = 363.636
+offset_right = 1229.27
+offset_bottom = 1083.64
+texture_normal = ExtResource("3_nlkkf")
+script = ExtResource("3_qe12f")
+
+[node name="Level 2 Button2" type="TextureButton" parent="Node2D"]
+offset_left = 1261.82
+offset_top = 363.636
+offset_right = 1743.82
+offset_bottom = 1083.64
+texture_normal = ExtResource("4_qe12f")
+script = ExtResource("3_qe12f")
+
+[node name="Redbeard" type="Sprite2D" parent="."]
+position = Vector2(992, 632)
+rotation = -0.0951284
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_8qtwp")
+
+[connection signal="mouse_entered" from="Node2D/Level 1 Button" to="Node2D/Level 1 Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/Level 1 Button" to="Node2D/Level 1 Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Node2D/Level 1 Button" to="Node2D/Level 1 Button" method="_on_pressed"]
+[connection signal="mouse_entered" from="Node2D/Level 2 Button" to="Node2D/Level 2 Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/Level 2 Button" to="Node2D/Level 2 Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Node2D/Level 2 Button" to="Node2D/Level 2 Button" method="_on_pressed"]
+[connection signal="mouse_entered" from="Node2D/Level 2 Button2" to="Node2D/Level 2 Button2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/Level 2 Button2" to="Node2D/Level 2 Button2" method="_on_mouse_exited"]
+[connection signal="pressed" from="Node2D/Level 2 Button2" to="Node2D/Level 2 Button2" method="_on_pressed"]

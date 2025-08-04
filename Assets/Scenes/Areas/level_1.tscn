@@ -1,13 +1,22 @@
-[gd_scene load_steps=26 format=3 uid="uid://dmcgl8ob8xsh"]
+[gd_scene load_steps=61 format=3 uid="uid://dmcgl8ob8xsh"]
 
 [ext_resource type="Texture2D" uid="uid://dofwqlbdpc30u" path="res://Assets/Sprites/sky.png" id="1_au6af"]
 [ext_resource type="PackedScene" uid="uid://dn6q35angxesc" path="res://Assets/Scenes/player.tscn" id="2_4muih"]
 [ext_resource type="Texture2D" uid="uid://dbv6p3wb8cgun" path="res://Assets/Sprites/clouds.png" id="2_au6af"]
+[ext_resource type="Script" uid="uid://bjo2ybtno72sw" path="res://Assets/Scenes/Areas/clouds_layer.gd" id="2_r6kxd"]
 [ext_resource type="PackedScene" uid="uid://dt86y27c7m33o" path="res://Assets/Scenes/stud.tscn" id="3_4muih"]
+[ext_resource type="Texture2D" uid="uid://cvo22lll83bpi" path="res://Assets/Sprites/clouds-1.png" id="3_dne6l"]
 [ext_resource type="Texture2D" uid="uid://br31vbv6htgr3" path="res://Assets/Sprites/Map Components/rock.png" id="4_c8ix6"]
+[ext_resource type="Texture2D" uid="uid://dud4n3wp7m2gn" path="res://Assets/Sprites/Map Components/fortress.png" id="5_mwgyc"]
+[ext_resource type="Texture2D" uid="uid://ol8wvu88ekqn" path="res://Assets/Sprites/cloud__2.png" id="5_p1l0d"]
+[ext_resource type="Texture2D" uid="uid://cwsmp11ux4o3d" path="res://Assets/Sprites/Map Components/horizon_b.png" id="5_p7eom"]
+[ext_resource type="Texture2D" uid="uid://delgl1xag7ed1" path="res://Assets/Sprites/Map Components/horizon_d.png" id="6_6ykoq"]
 [ext_resource type="Texture2D" uid="uid://cgk8njyl73j12" path="res://Assets/Sprites/Map Components/sand_tile.png" id="6_20xqu"]
+[ext_resource type="Texture2D" uid="uid://4wqqyar0vdte" path="res://Assets/Sprites/Map Components/bluecoats_ship.png" id="7_1cbq8"]
 [ext_resource type="PackedScene" uid="uid://t34oyjg5ujj4" path="res://Assets/Scenes/Islander Enemy.tscn" id="7_wonhx"]
-[ext_resource type="Texture2D" uid="uid://cwmkfw3cnymgv" path="res://Assets/Sprites/Map Components/sky_sand_gradient.png" id="11_1qfdr"]
+[ext_resource type="Texture2D" uid="uid://bmjp3hmd1apc0" path="res://Assets/Sprites/Map Components/palm_scene.png" id="8_skqmr"]
+[ext_resource type="Texture2D" uid="uid://ba5p2fcf8agu1" path="res://Assets/Sprites/Map Components/palms_scene.png" id="9_6mq66"]
+[ext_resource type="Texture2D" uid="uid://dr5lok033hgk6" path="res://Assets/Sprites/Map Components/grass_studs.png" id="11_agr01"]
 [ext_resource type="Texture2D" uid="uid://dl0ooy7eij0ju" path="res://Assets/Sprites/Map Components/horizon_a.png" id="12_fwv0e"]
 [ext_resource type="Texture2D" uid="uid://bvltnbli5vuuq" path="res://Assets/Sprites/Map Components/horizon_c.png" id="13_383x3"]
 [ext_resource type="Script" uid="uid://dcjv184o0orkr" path="res://Assets/Scenes/background_music.gd" id="13_k0i4c"]
@@ -15,22 +24,65 @@
 [ext_resource type="PackedScene" uid="uid://cb8iss0d6tphg" path="res://Assets/Scenes/key.tscn" id="16_5bg1d"]
 [ext_resource type="PackedScene" uid="uid://2ns2q5k8q8o6" path="res://Assets/Scenes/death_screen.tscn" id="16_k0i4c"]
 [ext_resource type="Texture2D" uid="uid://c6tujej25sbap" path="res://Assets/Sprites/Map Components/sand_top_layer.png" id="17_6ykoq"]
-[ext_resource type="PackedScene" uid="uid://u7hptmssmui8" path="res://Assets/Scenes/pirate_npc.tscn" id="17_k0i4c"]
-[ext_resource type="Texture2D" uid="uid://dwh462ev6li2h" path="res://Assets/Sprites/Map Components/yellow3.png" id="18_88hay"]
 [ext_resource type="Texture2D" uid="uid://chwhxx0si68tt" path="res://Assets/Sprites/Map Components/boat_in_water.png" id="18_p7eom"]
-[ext_resource type="Texture2D" uid="uid://movcfxj5iyeg" path="res://Assets/Sprites/Map Components/yellow2.png" id="19_2vyia"]
-[ext_resource type="Texture2D" uid="uid://ws1owyqkhce5" path="res://Assets/Sprites/Map Components/yellow1.png" id="20_20xqu"]
+[ext_resource type="Texture2D" uid="uid://cl1now2jwabv8" path="res://Assets/Sprites/Map Components/wooden_beam_top.png" id="20_o51rh"]
 [ext_resource type="Texture2D" uid="uid://pgadfoi1uybx" path="res://Assets/Sprites/download (5).png" id="21_y27wp"]
 [ext_resource type="Texture2D" uid="uid://bahrso3qvuxxo" path="res://Assets/Sprites/rock_face2.png" id="22_657dn"]
 [ext_resource type="Texture2D" uid="uid://3adv1kqymayd" path="res://Assets/Sprites/palm-tree2.png" id="23_2ilnm"]
+[ext_resource type="Texture2D" uid="uid://t4tusektsbmx" path="res://Assets/Sprites/Map Components/waves.png" id="23_y27wp"]
+[ext_resource type="Script" uid="uid://bp4pc1ib1lq3p" path="res://Assets/Scenes/Areas/moving_raft.gd" id="24_i8kx4"]
+[ext_resource type="Texture2D" uid="uid://brhp4f3x83m7k" path="res://Assets/Sprites/Map Components/tower.png" id="25_2x6xl"]
+[ext_resource type="Texture2D" uid="uid://bxoegm3hftabd" path="res://Assets/Sprites/Map Components/boat_platform.png" id="25_drcxs"]
+[ext_resource type="Script" uid="uid://cxcsd3l7tffp0" path="res://Assets/Scenes/Areas/waves.gd" id="25_i8kx4"]
+[ext_resource type="Texture2D" uid="uid://pjuubwqj6uyo" path="res://Assets/Sprites/Map Components/wooden_beam.png" id="33_n07i4"]
+[ext_resource type="Texture2D" uid="uid://ccmdewmii2nno" path="res://Assets/Sprites/Map Components/Dirt 2 .png" id="34_mwgyc"]
+[ext_resource type="Script" uid="uid://cafhxid3fqtpy" path="res://Assets/Scenes/Areas/cloud_platform.gd" id="35_0qxhw"]
+[ext_resource type="Texture2D" uid="uid://2gbl0fadttaf" path="res://Assets/Sprites/Map Components/plant_1.png" id="37_twins"]
+[ext_resource type="Texture2D" uid="uid://c2oprxdiac6e1" path="res://Assets/Sprites/cloud2.png" id="38_3515a"]
+[ext_resource type="Texture2D" uid="uid://by0thp4coqkp2" path="res://Assets/Sprites/cloud3.png" id="39_qf2y4"]
+[ext_resource type="Texture2D" uid="uid://dxly6jufv5km2" path="res://Assets/Sprites/Map Components/rock_tree.png" id="40_0qxhw"]
+[ext_resource type="Texture2D" uid="uid://bt8ny2xwcv3ll" path="res://Assets/Sprites/cloud1.png" id="40_o51rh"]
+[ext_resource type="Texture2D" uid="uid://disxfs320eds7" path="res://Assets/Sprites/Map Components/flag.png" id="41_0qxhw"]
+[ext_resource type="Texture2D" uid="uid://c7fsf1tpuub6f" path="res://Assets/Sprites/Map Components/flag_no_pole.png" id="42_3515a"]
+[ext_resource type="Texture2D" uid="uid://0hn1bhb7n2pd" path="res://Assets/Sprites/Map Components/green_plant_cover.png" id="42_o51rh"]
+[ext_resource type="Script" uid="uid://cwctc26g5aph4" path="res://Assets/Scenes/Areas/gate.gd" id="42_qf2y4"]
+[ext_resource type="Texture2D" uid="uid://ryphgb3mts5k" path="res://Assets/Sprites/Map Components/gate.png" id="43_qf2y4"]
+[ext_resource type="Script" uid="uid://dgagor5peh0hb" path="res://Assets/Scenes/Areas/flag_parent.gd" id="44_o51rh"]
+[ext_resource type="AudioStream" uid="uid://bu2qoniqmvj3j" path="res://Assets/Audios/victory.mp3" id="46_n07i4"]
+[ext_resource type="Texture2D" uid="uid://dmvfvdb15b30i" path="res://Assets/Sprites/Map Components/plant4.png" id="47_81be5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i8kx4"]
-size = Vector2(5551, 46)
+size = Vector2(4303, 46)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drcxs"]
 size = Vector2(55, 1436.02)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0sdrn"]
+size = Vector2(645, 47)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_agr01"]
+size = Vector2(4872, 154)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vnab"]
+size = Vector2(472, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3515a"]
+size = Vector2(200, 37.4999)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n07i4"]
+size = Vector2(162.5, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81be5"]
+size = Vector2(220.667, 28.9999)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r6kxd"]
+size = Vector2(95.3335, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2x6xl"]
+size = Vector2(85.3335, 2272)
+
 [node name="Level_1" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [-1648.0]
 
 [node name="MAP" type="Node2D" parent="."]
 
@@ -41,175 +93,496 @@ position = Vector2(0, -900)
 motion_mirroring = Vector2(6850, 0)
 
 [node name="sky_image" type="Sprite2D" parent="MAP/ParallaxBG/Sky layer"]
-position = Vector2(343, 0)
-scale = Vector2(3.2, 3.2)
+position = Vector2(343, -786.001)
+scale = Vector2(3.2, 5.38333)
 texture = ExtResource("1_au6af")
 
 [node name="sky_image2" type="Sprite2D" parent="MAP/ParallaxBG/Sky layer"]
-position = Vector2(3750, 0)
-scale = Vector2(3.2, 3.2)
+position = Vector2(3750, -786.001)
+scale = Vector2(3.2, 5.38333)
 texture = ExtResource("1_au6af")
 
 [node name="Clouds layer" type="ParallaxLayer" parent="MAP/ParallaxBG"]
 motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(7500, 0)
+script = ExtResource("2_r6kxd")
 
-[node name="clouds" type="Sprite2D" parent="MAP/ParallaxBG/Clouds layer"]
-position = Vector2(1740, -1115)
-scale = Vector2(0.4, 0.448)
+[node name="Clouds-1" type="Sprite2D" parent="MAP/ParallaxBG/Clouds layer"]
+position = Vector2(3618, -1418)
+scale = Vector2(0.3, 0.342)
+texture = ExtResource("3_dne6l")
+
+[node name="Clouds-2" type="Sprite2D" parent="MAP/ParallaxBG/Clouds layer"]
+position = Vector2(5239, -2211)
+scale = Vector2(-0.4, 0.4)
+texture = ExtResource("3_dne6l")
+
+[node name="Cloud2" type="Sprite2D" parent="MAP/ParallaxBG/Clouds layer"]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(6077, -872)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_p1l0d")
+
+[node name="Cloud3" type="Sprite2D" parent="MAP/ParallaxBG/Clouds layer"]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(2167, -2645)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_p1l0d")
+
+[node name="Clouds" type="Sprite2D" parent="MAP/ParallaxBG/Clouds layer"]
+position = Vector2(1555, -1149)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_au6af")
 
-[node name="Horizon" type="ParallaxLayer" parent="MAP/ParallaxBG"]
+[node name="Horizon sea" type="ParallaxLayer" parent="MAP/ParallaxBG"]
 position = Vector2(136, -8)
 motion_scale = Vector2(0.9, 1)
 
-[node name="SkySandGradient" type="Sprite2D" parent="MAP/ParallaxBG/Horizon"]
-position = Vector2(2366.65, -243)
-scale = Vector2(6.90443, 0.261)
-texture = ExtResource("11_1qfdr")
-
-[node name="Horizon" type="Sprite2D" parent="MAP/ParallaxBG/Horizon"]
+[node name="Horizon" type="Sprite2D" parent="MAP/ParallaxBG/Horizon sea"]
 position = Vector2(-656, -24)
 scale = Vector2(3.8, 3.8)
 texture = ExtResource("12_fwv0e")
 
-[node name="SandHorizon" type="Sprite2D" parent="MAP/ParallaxBG/Horizon"]
+[node name="Horizon2" type="Sprite2D" parent="MAP/ParallaxBG/Horizon sea/Horizon"]
+position = Vector2(2073.16, 0)
+scale = Vector2(1.10818, 1)
+texture = ExtResource("5_p7eom")
+
+[node name="Horizon landmarks" type="ParallaxLayer" parent="MAP/ParallaxBG"]
+position = Vector2(136, -8)
+motion_scale = Vector2(0.8, 1)
+
+[node name="Fortress" type="Sprite2D" parent="MAP/ParallaxBG/Horizon landmarks"]
+self_modulate = Color(1, 1, 1, 0.705882)
+position = Vector2(5160, -745)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_mwgyc")
+
+[node name="BluecoatsShip" type="Sprite2D" parent="MAP/ParallaxBG/Horizon landmarks"]
+self_modulate = Color(1, 1, 1, 0.615686)
+position = Vector2(7136, -472)
+rotation = -3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("7_1cbq8")
+
+[node name="Horizon land" type="ParallaxLayer" parent="MAP/ParallaxBG"]
+position = Vector2(136, -8)
+motion_scale = Vector2(0.9, 1)
+
+[node name="SandHorizon" type="Sprite2D" parent="MAP/ParallaxBG/Horizon land"]
 position = Vector2(1340, 26)
 scale = Vector2(1.9, 1.9)
 texture = ExtResource("13_383x3")
 
-[node name="SandHorizon2" type="Sprite2D" parent="MAP/ParallaxBG/Horizon"]
-position = Vector2(3299, 26)
+[node name="SandHorizon2" type="Sprite2D" parent="MAP/ParallaxBG/Horizon land"]
+position = Vector2(3392, 22)
 scale = Vector2(1.9, 1.9)
 texture = ExtResource("13_383x3")
 
-[node name="Yellow1" type="Sprite2D" parent="MAP"]
-position = Vector2(3184, -640)
-scale = Vector2(1.8, 1.8)
-texture = ExtResource("20_20xqu")
+[node name="SandHorizon3" type="Sprite2D" parent="MAP/ParallaxBG/Horizon land"]
+position = Vector2(5178, 16)
+scale = Vector2(1.9, 1.9)
+texture = ExtResource("6_6ykoq")
 
-[node name="Yellow3" type="Sprite2D" parent="MAP"]
-position = Vector2(2848, -616)
-scale = Vector2(1.8, 1.8)
-texture = ExtResource("18_88hay")
+[node name="SandHorizon4" type="Sprite2D" parent="MAP/ParallaxBG/Horizon land"]
+position = Vector2(9629, 16)
+scale = Vector2(-1.9, 1.9)
+texture = ExtResource("6_6ykoq")
 
-[node name="Yellow2" type="Sprite2D" parent="MAP"]
-position = Vector2(2600, -648)
-scale = Vector2(1.8, 1.8)
-texture = ExtResource("19_2vyia")
+[node name="SandHorizon5" type="Sprite2D" parent="MAP/ParallaxBG/Horizon land"]
+position = Vector2(11153, 16)
+scale = Vector2(1.9, 1.9)
+texture = ExtResource("6_6ykoq")
 
-[node name="Area2D" type="Area2D" parent="MAP"]
-position = Vector2(-435, 14)
-scale = Vector2(1.8, 1.8)
+[node name="PalmScene" type="Sprite2D" parent="MAP/ParallaxBG/Horizon land"]
+self_modulate = Color(1, 1, 1, 0.862745)
+position = Vector2(10593, -520)
+rotation = 3.14159
+scale = Vector2(1.8, -1.8)
+texture = ExtResource("8_skqmr")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="MAP"]
+[node name="SECTION A" type="Node2D" parent="MAP"]
 
-[node name="SandTopLayer" type="Sprite2D" parent="MAP/StaticBody2D2"]
+[node name="SandTopLayer" type="Sprite2D" parent="MAP/SECTION A"]
 position = Vector2(438, 6)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("17_6ykoq")
 
-[node name="SandTopLayer2" type="Sprite2D" parent="MAP/StaticBody2D2"]
+[node name="SandTopLayer2" type="Sprite2D" parent="MAP/SECTION A"]
 position = Vector2(1309, 6)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("17_6ykoq")
 
-[node name="SandTopLayer3" type="Sprite2D" parent="MAP/StaticBody2D2"]
+[node name="SandTopLayer3" type="Sprite2D" parent="MAP/SECTION A"]
 position = Vector2(2178, 6)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("17_6ykoq")
 
-[node name="SandTopLayer4" type="Sprite2D" parent="MAP/StaticBody2D2"]
+[node name="SandTopLayer4" type="Sprite2D" parent="MAP/SECTION A"]
 position = Vector2(3054, 6)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("17_6ykoq")
 
-[node name="BoatInWater" type="Sprite2D" parent="MAP/StaticBody2D2"]
+[node name="SandTopLayer10" type="Sprite2D" parent="MAP/SECTION A"]
+position = Vector2(3634, 5.99999)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("17_6ykoq")
+
+[node name="SandTopLayer11" type="Sprite2D" parent="MAP/SECTION A"]
+position = Vector2(4508, 6)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("17_6ykoq")
+
+[node name="SandTopLayer6" type="Sprite2D" parent="MAP/SECTION A"]
+position = Vector2(4776, -121)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("17_6ykoq")
+
+[node name="SandTopLayer7" type="Sprite2D" parent="MAP/SECTION A"]
+position = Vector2(5644, -121)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("17_6ykoq")
+
+[node name="SandTopLayer8" type="Sprite2D" parent="MAP/SECTION A"]
+position = Vector2(5644, -121)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("17_6ykoq")
+
+[node name="BoatInWater" type="Sprite2D" parent="MAP/SECTION A"]
 position = Vector2(-445, 17)
 texture = ExtResource("18_p7eom")
 
-[node name="SandTexture2" type="Sprite2D" parent="MAP/StaticBody2D2"]
+[node name="SandTexture2" type="Sprite2D" parent="MAP/SECTION A"]
 position = Vector2(380.267, 362.624)
 rotation = -1.1507
 scale = Vector2(0.323232, 0.952658)
 texture = ExtResource("6_20xqu")
 
-[node name="SandTexture" type="Sprite2D" parent="MAP/StaticBody2D2"]
+[node name="SandTexture" type="Sprite2D" parent="MAP/SECTION A"]
 position = Vector2(1176, 168.9)
 scale = Vector2(2.28906, 0.30293)
 texture = ExtResource("6_20xqu")
 
-[node name="SandTexture3" type="Sprite2D" parent="MAP/StaticBody2D2"]
-position = Vector2(2882, 168)
-scale = Vector2(1.04297, 0.30293)
+[node name="SandTexture3" type="Sprite2D" parent="MAP/SECTION A"]
+position = Vector2(3330, 168)
+scale = Vector2(1.91797, 0.30293)
 texture = ExtResource("6_20xqu")
 
-[node name="a" type="Node" parent="MAP"]
+[node name="SandTexture4" type="Sprite2D" parent="MAP/SECTION A"]
+position = Vector2(5209.5, 144)
+scale = Vector2(1.69824, 0.484375)
+texture = ExtResource("6_20xqu")
 
-[node name="Rock" type="StaticBody2D" parent="MAP/a"]
+[node name="SandTexture5" type="Sprite2D" parent="MAP/SECTION A"]
+position = Vector2(4334.32, 194.259)
+rotation = -1.1325
+scale = Vector2(0.53403, 0.236439)
+texture = ExtResource("6_20xqu")
 
-[node name="Rock" type="Sprite2D" parent="MAP/a/Rock"]
+[node name="SECTION B" type="Node2D" parent="MAP"]
+
+[node name="SandTopLayer10" type="Sprite2D" parent="MAP/SECTION B"]
+position = Vector2(11153, -60)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("17_6ykoq")
+
+[node name="SandTopLayer11" type="Sprite2D" parent="MAP/SECTION B"]
+position = Vector2(12024, -59)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("17_6ykoq")
+
+[node name="SandTexture10" type="Sprite2D" parent="MAP/SECTION B"]
+position = Vector2(11360, 473.501)
+scale = Vector2(1.10938, 1.01856)
+texture = ExtResource("6_20xqu")
+
+[node name="Dirt3" type="Sprite2D" parent="MAP/SECTION B"]
+position = Vector2(12190, 408)
+rotation = -1.26011
+scale = Vector2(0.506362, 0.417969)
+texture = ExtResource("34_mwgyc")
+
+[node name="GrassStuds8" type="Sprite2D" parent="MAP/SECTION B"]
+position = Vector2(15736, 104)
+scale = Vector2(0.455, 0.455)
+texture = ExtResource("11_agr01")
+
+[node name="GrassStuds9" type="Sprite2D" parent="MAP/SECTION B"]
+position = Vector2(16312, 104)
+scale = Vector2(0.455, 0.455)
+texture = ExtResource("11_agr01")
+
+[node name="GrassStuds10" type="Sprite2D" parent="MAP/SECTION B"]
+position = Vector2(16600, 104)
+scale = Vector2(0.455, 0.455)
+texture = ExtResource("11_agr01")
+
+[node name="Dirt5" type="Sprite2D" parent="MAP/SECTION B"]
+position = Vector2(16205, 552)
+scale = Vector2(0.668945, 0.417969)
+texture = ExtResource("34_mwgyc")
+
+[node name="Dirt4" type="Sprite2D" parent="MAP/SECTION B"]
+position = Vector2(15168, 408)
+rotation = 1.26013
+scale = Vector2(0.506362, 0.417969)
+texture = ExtResource("34_mwgyc")
+
+[node name="GrassStuds" type="Sprite2D" parent="MAP/SECTION B"]
+position = Vector2(12228, -238)
+scale = Vector2(0.455, 0.455)
+texture = ExtResource("11_agr01")
+
+[node name="GrassStuds2" type="Sprite2D" parent="MAP/SECTION B"]
+position = Vector2(12808, -238)
+scale = Vector2(0.455, 0.455)
+texture = ExtResource("11_agr01")
+
+[node name="GrassStuds3" type="Sprite2D" parent="MAP/SECTION B"]
+position = Vector2(13388, -238)
+scale = Vector2(0.455, 0.455)
+texture = ExtResource("11_agr01")
+
+[node name="GrassStuds4" type="Sprite2D" parent="MAP/SECTION B"]
+position = Vector2(13968, -238)
+scale = Vector2(0.455, 0.455)
+texture = ExtResource("11_agr01")
+
+[node name="GrassStuds6" type="Sprite2D" parent="MAP/SECTION B"]
+position = Vector2(14547, -238)
+scale = Vector2(0.455, 0.455)
+texture = ExtResource("11_agr01")
+
+[node name="GrassStuds7" type="Sprite2D" parent="MAP/SECTION B"]
+position = Vector2(15126, -238)
+scale = Vector2(0.455, 0.455)
+texture = ExtResource("11_agr01")
+
+[node name="Dirt2" type="Sprite2D" parent="MAP/SECTION B"]
+position = Vector2(13677.5, 210)
+scale = Vector2(1.69776, 0.417969)
+texture = ExtResource("34_mwgyc")
+
+[node name="Over water jump platforms" type="StaticBody2D" parent="MAP"]
+position = Vector2(3928, 216)
+scale = Vector2(0.867188, 0.483496)
+
+[node name="WoodenBeamTop" type="Sprite2D" parent="MAP/Over water jump platforms"]
+position = Vector2(5280.28, -678.393)
+scale = Vector2(1.4991, 2.68875)
+texture = ExtResource("20_o51rh")
+
+[node name="WoodenBeamTop2" type="Sprite2D" parent="MAP/Over water jump platforms"]
+position = Vector2(6107.1, -1125.14)
+scale = Vector2(1.4991, 2.68875)
+texture = ExtResource("20_o51rh")
+
+[node name="WoodenBeamTop3" type="Sprite2D" parent="MAP/Over water jump platforms"]
+position = Vector2(6925.83, -949.336)
+scale = Vector2(1.4991, 2.68875)
+texture = ExtResource("20_o51rh")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MAP/Over water jump platforms"]
+position = Vector2(6848.21, 162.74)
+polygon = PackedVector2Array(-1654.41, 101.999, -1654.41, -857.678, -1488.35, -857.678, -1488.35, 68.9063, -833.363, 68.9063, -833.363, -1304.42, -658.084, -1304.42, -658.084, 85.4524, -12.3184, 85.4524, -12.3223, -1122.42, 162.957, -1122.42, 162.961, 35.8139, 162.961, 284.006, -1654.41, 267.46)
+
+[node name="Rock" type="StaticBody2D" parent="MAP"]
+
+[node name="Rock" type="Sprite2D" parent="MAP/Rock"]
 position = Vector2(1454, -54)
 scale = Vector2(0.47, 0.47)
 texture = ExtResource("4_c8ix6")
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MAP/a/Rock"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MAP/Rock"]
 polygon = PackedVector2Array(1308, 14, 1308, -2, 1324, -53, 1358, -88, 1386, -99, 1386, -114, 1386, -114, 1520, -114, 1521, -103, 1527, -103, 1568, -82, 1586, -57, 1599, -5, 1600, 11)
 
-[node name="Rockface" type="StaticBody2D" parent="MAP/a"]
+[node name="Rockface" type="StaticBody2D" parent="MAP"]
 
-[node name="rockface_p1" type="Sprite2D" parent="MAP/a/Rockface"]
+[node name="rockface_p1" type="Sprite2D" parent="MAP/Rockface"]
 position = Vector2(-30.9999, 88)
 scale = Vector2(0.688, 0.688)
 texture = ExtResource("21_y27wp")
 
-[node name="rockface_p2" type="Sprite2D" parent="MAP/a/Rockface"]
+[node name="rockface_p2" type="Sprite2D" parent="MAP/Rockface"]
 position = Vector2(459, -70)
 scale = Vector2(1.12, 1.12)
 texture = ExtResource("22_657dn")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MAP/a/Rockface"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MAP/Rockface"]
 position = Vector2(0, -65)
 polygon = PackedVector2Array(656, 113, 656, -47, 584, -47, 584, -224, 512, -224, 512, -312, 368, -312, 368, -224, 296, -224, 296, -48, 224, -48, 224, 113)
 
-[node name="Boundaries2" type="StaticBody2D" parent="MAP/a"]
+[node name="Boundaries2" type="StaticBody2D" parent="MAP"]
 
-[node name="ground" type="CollisionShape2D" parent="MAP/a/Boundaries2"]
-position = Vector2(2776.5, 28)
+[node name="ground" type="CollisionShape2D" parent="MAP/Boundaries2"]
+position = Vector2(2152.5, 28)
 shape = SubResource("RectangleShape2D_i8kx4")
 
-[node name="left to boat" type="CollisionShape2D" parent="MAP/a/Boundaries2"]
+[node name="left to boat" type="CollisionShape2D" parent="MAP/Boundaries2"]
 position = Vector2(4, -456)
 scale = Vector2(0.688, 0.688)
 shape = SubResource("RectangleShape2D_drcxs")
 
-[node name="Palm-tree" type="Sprite2D" parent="MAP/a"]
+[node name="ground2" type="CollisionPolygon2D" parent="MAP/Boundaries2"]
+polygon = PackedVector2Array(4284, 342, 4285, 18, 4349, -119, 6080, -120, 6080, 344)
+
+[node name="ground3" type="CollisionPolygon2D" parent="MAP/Boundaries2"]
+position = Vector2(152, 256)
+polygon = PackedVector2Array(10568, 456, 10568, -312, 10568, -312, 11737, -313, 11787, -472, 11787, -508, 15256, -496, 15368, -168, 16736, -168, 16736, 456)
+
+[node name="Palm-tree" type="Sprite2D" parent="MAP"]
 position = Vector2(1840, -648)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("23_2ilnm")
 
 [node name="Islander" parent="." instance=ExtResource("7_wonhx")]
-position = Vector2(2954, -203)
+position = Vector2(12614, -464)
 
-[node name="Pirate NPC" parent="." instance=ExtResource("17_k0i4c")]
-position = Vector2(4980, -182)
-scale = Vector2(-0.55, 0.55)
+[node name="Moving Raft" type="CharacterBody2D" parent="."]
+position = Vector2(6580, 128)
+script = ExtResource("24_i8kx4")
+
+[node name="BoatPlatform" type="Sprite2D" parent="Moving Raft"]
+position = Vector2(648.5, -280)
+texture = ExtResource("25_drcxs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Raft"]
+position = Vector2(638, -102.5)
+shape = SubResource("RectangleShape2D_0sdrn")
 
 [node name="Player" parent="." instance=ExtResource("2_4muih")]
 position = Vector2(944, -187)
 
+[node name="Waves" type="Area2D" parent="."]
+position = Vector2(6580, 128)
+collision_mask = 2
+script = ExtResource("25_i8kx4")
+
+[node name="Waves" type="Sprite2D" parent="Waves"]
+position = Vector2(11, 0)
+texture = ExtResource("23_y27wp")
+
+[node name="Waves2" type="Sprite2D" parent="Waves"]
+position = Vector2(575, 0)
+texture = ExtResource("23_y27wp")
+
+[node name="Waves3" type="Sprite2D" parent="Waves"]
+position = Vector2(1138, 0)
+texture = ExtResource("23_y27wp")
+
+[node name="Waves4" type="Sprite2D" parent="Waves"]
+position = Vector2(1703, 0)
+texture = ExtResource("23_y27wp")
+
+[node name="Waves5" type="Sprite2D" parent="Waves"]
+position = Vector2(2671, 0)
+rotation = 3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("23_y27wp")
+
+[node name="Waves6" type="Sprite2D" parent="Waves"]
+position = Vector2(3628, 0)
+texture = ExtResource("23_y27wp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Waves"]
+position = Vector2(1776, 48)
+shape = SubResource("RectangleShape2D_agr01")
+
+[node name="Platform bit over waves" type="Node2D" parent="."]
+position = Vector2(6580, 128)
+
+[node name="WoodenBeam" type="Sprite2D" parent="Platform bit over waves"]
+position = Vector2(1927, 130)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("33_n07i4")
+
+[node name="WoodenBeam2" type="Sprite2D" parent="Platform bit over waves"]
+position = Vector2(2643, -85)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("33_n07i4")
+
+[node name="WoodenBeam3" type="Sprite2D" parent="Platform bit over waves"]
+position = Vector2(3354, -1)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("33_n07i4")
+
+[node name="SandTexture12" type="Sprite2D" parent="Platform bit over waves"]
+position = Vector2(4229.75, 144.5)
+scale = Vector2(0.180176, 0.639648)
+texture = ExtResource("6_20xqu")
+
+[node name="SandTexture13" type="Sprite2D" parent="Platform bit over waves"]
+position = Vector2(-596, 93.2499)
+scale = Vector2(0.180176, 0.645019)
+texture = ExtResource("6_20xqu")
+
 [node name="Node" type="Node" parent="."]
 
+[node name="Stud" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(440, -544)
+
 [node name="Stud2" parent="Node" instance=ExtResource("3_4muih")]
-position = Vector2(2370, -269)
+position = Vector2(2344, -220)
 
 [node name="Stud3" parent="Node" instance=ExtResource("3_4muih")]
-position = Vector2(2071, -269)
+position = Vector2(2644, -220)
 
 [node name="Stud4" parent="Node" instance=ExtResource("3_4muih")]
-position = Vector2(450, -618)
+position = Vector2(2944, -220)
 
 [node name="Stud5" parent="Node" instance=ExtResource("3_4muih")]
-position = Vector2(1688, -269)
+position = Vector2(4560, -348)
+
+[node name="Stud7" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(4736, -350)
+
+[node name="Stud20" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(4648, -480)
+
+[node name="Stud8" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(8501, -300)
+
+[node name="Stud9" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(9218, -550)
+
+[node name="Stud10" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(9929, -400)
+
+[node name="Stud21" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(10941, -224)
+
+[node name="Stud11" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(13616, -816)
+
+[node name="Stud12" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(13616, -966)
+
+[node name="Stud14" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(14403, -1152)
+
+[node name="Stud25" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(15178, -1469)
+
+[node name="Stud17" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(14891, -458)
+
+[node name="Stud18" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(15137, -458)
+
+[node name="Stud19" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(15688, -112)
+
+[node name="Stud15" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(14553, -1917)
+
+[node name="Stud16" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(14628, -1814)
+
+[node name="Stud24" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(14477, -1810)
+
+[node name="Stud13" parent="Node" instance=ExtResource("3_4muih")]
+position = Vector2(13616, -1112)
 
 [node name="Background Music" type="Node" parent="."]
 process_mode = 3
@@ -220,6 +593,174 @@ script = ExtResource("13_k0i4c")
 [node name="GameScreen" parent="." instance=ExtResource("13_tdti5")]
 
 [node name="Map_Item" parent="." instance=ExtResource("16_5bg1d")]
-position = Vector2(4461, -190)
+position = Vector2(15648, -2168)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("16_k0i4c")]
+
+[node name="Tower" type="StaticBody2D" parent="."]
+
+[node name="Tower" type="Sprite2D" parent="Tower"]
+position = Vector2(13723, -939)
+scale = Vector2(2.85, 2.85)
+texture = ExtResource("25_2x6xl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tower"]
+position = Vector2(13718, -685.5)
+shape = SubResource("RectangleShape2D_2vnab")
+one_way_collision = true
+
+[node name="Cloud Platforms" type="Node2D" parent="."]
+position = Vector2(13072, -960)
+scale = Vector2(1.5, 1.5)
+
+[node name="Cloud A" type="CharacterBody2D" parent="Cloud Platforms"]
+script = ExtResource("35_0qxhw")
+
+[node name="Cloud2" type="Sprite2D" parent="Cloud Platforms/Cloud A"]
+position = Vector2(890.001, 12.5)
+texture = ExtResource("40_o51rh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cloud Platforms/Cloud A"]
+position = Vector2(887.336, 8.83337)
+scale = Vector2(0.666667, 0.666667)
+shape = SubResource("RectangleShape2D_3515a")
+one_way_collision = true
+
+[node name="Cloud B" type="CharacterBody2D" parent="Cloud Platforms"]
+script = ExtResource("35_0qxhw")
+speed = 45
+move_time = 4
+x_or_y = "y"
+
+[node name="Cloud1" type="Sprite2D" parent="Cloud Platforms/Cloud B"]
+position = Vector2(1398.67, -180.5)
+texture = ExtResource("38_3515a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cloud Platforms/Cloud B"]
+position = Vector2(1402.67, -186)
+shape = SubResource("RectangleShape2D_n07i4")
+one_way_collision = true
+
+[node name="Cloud C" type="CharacterBody2D" parent="Cloud Platforms"]
+script = ExtResource("35_0qxhw")
+speed = 40
+move_time = 4
+
+[node name="Cloud3" type="Sprite2D" parent="Cloud Platforms/Cloud C"]
+position = Vector2(984.001, -422.833)
+texture = ExtResource("39_qf2y4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Cloud Platforms/Cloud C"]
+position = Vector2(991.002, -435.333)
+shape = SubResource("RectangleShape2D_81be5")
+one_way_collision = true
+
+[node name="Cloud D" type="CharacterBody2D" parent="Cloud Platforms"]
+script = ExtResource("35_0qxhw")
+speed = 40
+move_time = 1
+x_or_y = "y"
+
+[node name="Cloud4" type="Sprite2D" parent="Cloud Platforms/Cloud D"]
+position = Vector2(1713.33, -645.5)
+texture = ExtResource("40_o51rh")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Cloud Platforms/Cloud D"]
+position = Vector2(1713, -640)
+shape = SubResource("RectangleShape2D_r6kxd")
+one_way_collision = true
+
+[node name="Plants" type="Node2D" parent="."]
+
+[node name="SandTexture6" type="Sprite2D" parent="Plants"]
+position = Vector2(3410.5, 22)
+scale = Vector2(0.120117, 0.0546875)
+texture = ExtResource("6_20xqu")
+
+[node name="SandTexture7" type="Sprite2D" parent="Plants"]
+position = Vector2(3852.5, 21)
+scale = Vector2(0.120117, 0.0546875)
+texture = ExtResource("6_20xqu")
+
+[node name="SandTexture8" type="Sprite2D" parent="Plants"]
+position = Vector2(3742, 21)
+scale = Vector2(0.0468748, 0.0546875)
+texture = ExtResource("6_20xqu")
+
+[node name="GreenPlantCover" type="Sprite2D" parent="Plants"]
+position = Vector2(13351.9, -235)
+scale = Vector2(0.50758, 0.522727)
+texture = ExtResource("42_o51rh")
+
+[node name="GreenPlantCover3" type="Sprite2D" parent="Plants"]
+position = Vector2(14583.9, -236.25)
+scale = Vector2(0.425497, 0.738636)
+texture = ExtResource("42_o51rh")
+
+[node name="GreenPlantCover2" type="Sprite2D" parent="Plants"]
+position = Vector2(14082.5, -237.25)
+scale = Vector2(4.81818, 0.806818)
+texture = ExtResource("42_o51rh")
+
+[node name="PalmsScene" type="Sprite2D" parent="Plants"]
+position = Vector2(3744, -814)
+scale = Vector2(2.8, 2.8)
+texture = ExtResource("9_6mq66")
+
+[node name="Plant1" type="Sprite2D" parent="Plants"]
+position = Vector2(3740, -97)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("37_twins")
+
+[node name="Plant2" type="Sprite2D" parent="Plants"]
+position = Vector2(13350, -354.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("37_twins")
+
+[node name="RockTree" type="Sprite2D" parent="Plants"]
+position = Vector2(14088, -521)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("40_0qxhw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(16024, -251)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("42_qf2y4")
+
+[node name="Gate" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("43_qf2y4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-53.334, -1820)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_2x6xl")
+
+[node name="End Flag" type="Node2D" parent="."]
+position = Vector2(16488, -196)
+scale = Vector2(0.9, 0.9)
+
+[node name="Pole" type="Sprite2D" parent="End Flag"]
+texture = ExtResource("41_0qxhw")
+
+[node name="Flag Parent" type="Area2D" parent="End Flag"]
+collision_mask = 2
+script = ExtResource("44_o51rh")
+
+[node name="Flag" type="Sprite2D" parent="End Flag/Flag Parent"]
+position = Vector2(0.00585938, 293.333)
+texture = ExtResource("42_3515a")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="End Flag/Flag Parent"]
+position = Vector2(-2.21875, 0)
+polygon = PackedVector2Array(-166.672, 22.2222, 97.7793, 22.2222, 97.7793, 164.444, -166.672, 164.444)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="End Flag/Flag Parent"]
+stream = ExtResource("46_n07i4")
+
+[node name="Plant4" type="Sprite2D" parent="."]
+position = Vector2(14584, -412)
+scale = Vector2(-0.6, 0.6)
+texture = ExtResource("47_81be5")
+
+[connection signal="body_entered" from="Waves" to="Waves" method="_on_body_entered"]
+[connection signal="body_entered" from="End Flag/Flag Parent" to="End Flag/Flag Parent" method="_on_body_entered"]

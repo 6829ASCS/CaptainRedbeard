@@ -8,7 +8,7 @@ var DeathSound = preload("res://Assets/Audios/lego-breaking.mp3")
 
 var speed = 250
 var direction = 1  # Start moving right
-var move_time = 4.0 # seconds before changing direction
+var move_time = 3 # seconds before changing direction
 var time_passed = 0.0
 var is_dead = false
 

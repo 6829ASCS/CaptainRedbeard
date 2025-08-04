@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cb8iss0d6tphg"]
+[gd_scene load_steps=15 format=3 uid="uid://cb8iss0d6tphg"]
 
 [ext_resource type="Script" uid="uid://vvg13sg8n4yo" path="res://UI/Key/map_item.gd" id="1_fs387"]
 [ext_resource type="Texture2D" uid="uid://biwi0tga5jfty" path="res://Assets/Sprites/Item Animations/map1.png" id="2_5uuly"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dw1dslsuy3q0o" path="res://Assets/Sprites/Item Animations/key_3.png" id="9_hurct"]
 [ext_resource type="Texture2D" uid="uid://cfvwa721t2vt3" path="res://Assets/Sprites/Item Animations/key_4.png" id="10_jq5of"]
 [ext_resource type="Texture2D" uid="uid://bl5cawlyg4kgy" path="res://Assets/Sprites/Item Animations/key_5.png" id="11_ip8n4"]
+[ext_resource type="AudioStream" uid="uid://bqycf1kgj6yl7" path="res://Assets/Audios/key_pickup.wav" id="12_7rdjh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ump65"]
 animations = [{
@@ -73,5 +74,8 @@ frame_progress = 0.792316
 position = Vector2(1.52588e-05, 8)
 scale = Vector2(0.2, 0.2)
 shape = SubResource("CircleShape2D_54iss")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_7rdjh")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

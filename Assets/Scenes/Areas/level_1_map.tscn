@@ -1,20 +1,23 @@
 [gd_scene load_steps=18 format=3 uid="uid://b04x38tbgqhoa"]
 
 [ext_resource type="Texture2D" uid="uid://dofwqlbdpc30u" path="res://Assets/Sprites/sky.png" id="1_g2sb7"]
-[ext_resource type="Texture2D" uid="uid://dwh462ev6li2h" path="res://Assets/Sprites/Map Components/yellow3.png" id="1_t2q2l"]
 [ext_resource type="Texture2D" uid="uid://dbv6p3wb8cgun" path="res://Assets/Sprites/clouds.png" id="2_3i6ni"]
-[ext_resource type="Texture2D" uid="uid://movcfxj5iyeg" path="res://Assets/Sprites/Map Components/yellow2.png" id="2_d656x"]
 [ext_resource type="Texture2D" uid="uid://dl0ooy7eij0ju" path="res://Assets/Sprites/Map Components/horizon_a.png" id="3_3i6ni"]
 [ext_resource type="Texture2D" uid="uid://cwmkfw3cnymgv" path="res://Assets/Sprites/Map Components/sky_sand_gradient.png" id="3_x8o5x"]
 [ext_resource type="Texture2D" uid="uid://bvltnbli5vuuq" path="res://Assets/Sprites/Map Components/horizon_c.png" id="4_3i6ni"]
 [ext_resource type="Texture2D" uid="uid://c6tujej25sbap" path="res://Assets/Sprites/Map Components/sand_top_layer.png" id="4_5frsa"]
 [ext_resource type="Texture2D" uid="uid://cgk8njyl73j12" path="res://Assets/Sprites/Map Components/sand_tile.png" id="4_gf471"]
-[ext_resource type="Texture2D" uid="uid://ws1owyqkhce5" path="res://Assets/Sprites/Map Components/yellow1.png" id="5_cxsxv"]
 [ext_resource type="Texture2D" uid="uid://br31vbv6htgr3" path="res://Assets/Sprites/Map Components/rock.png" id="5_gf471"]
 [ext_resource type="Texture2D" uid="uid://chwhxx0si68tt" path="res://Assets/Sprites/Map Components/boat_in_water.png" id="9_gf471"]
 [ext_resource type="Texture2D" uid="uid://pgadfoi1uybx" path="res://Assets/Sprites/download (5).png" id="10_cxsxv"]
 [ext_resource type="Texture2D" uid="uid://bahrso3qvuxxo" path="res://Assets/Sprites/rock_face2.png" id="11_5frsa"]
 [ext_resource type="Texture2D" uid="uid://3adv1kqymayd" path="res://Assets/Sprites/palm-tree2.png" id="12_nqgtb"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nqgtb"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d0a3l"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g2sb7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gf471"]
 size = Vector2(3426, 46)
@@ -75,17 +78,17 @@ texture = ExtResource("4_3i6ni")
 [node name="Yellow1" type="Sprite2D" parent="."]
 position = Vector2(3184, -640)
 scale = Vector2(1.8, 1.8)
-texture = ExtResource("5_cxsxv")
+texture = SubResource("CompressedTexture2D_nqgtb")
 
 [node name="Yellow3" type="Sprite2D" parent="."]
 position = Vector2(2848, -616)
 scale = Vector2(1.8, 1.8)
-texture = ExtResource("1_t2q2l")
+texture = SubResource("CompressedTexture2D_d0a3l")
 
 [node name="Yellow2" type="Sprite2D" parent="."]
 position = Vector2(2600, -648)
 scale = Vector2(1.8, 1.8)
-texture = ExtResource("2_d656x")
+texture = SubResource("CompressedTexture2D_g2sb7")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-435, 14)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bsq576jgw4i0u"]
+[gd_scene load_steps=16 format=3 uid="uid://bsq576jgw4i0u"]
 
 [ext_resource type="PackedScene" uid="uid://4g3qhsx5k8g0" path="res://UI/health bar/health_bar.tscn" id="1_60nn1"]
 [ext_resource type="PackedScene" uid="uid://bs4au5mh4uaqf" path="res://UI/Key/missing_item.tscn" id="1_xw6kl"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://brk2ewffgv54h" path="res://UI/ui icons/pause_normal.png" id="11_3hgyf"]
 [ext_resource type="Script" uid="uid://vgonkhdms84v" path="res://UI/mute_button.gd" id="12_ytrf8"]
 [ext_resource type="Texture2D" uid="uid://bcvfj2br12dwt" path="res://UI/ui icons/muted.png" id="13_c5q7s"]
+[ext_resource type="Texture2D" uid="uid://mhsqmua217ku" path="res://UI/ui icons/home.png" id="16_u7bt3"]
 
 [node name="GameScreen" type="CanvasLayer"]
 
@@ -69,6 +70,15 @@ toggle_mode = true
 texture_normal = ExtResource("11_3hgyf")
 texture_pressed = ExtResource("7_k5pxx")
 
+[node name="HomeButton" type="TextureButton" parent="Pause Button"]
+process_mode = 3
+offset_left = 2120.0
+offset_top = 7.5
+offset_right = 2244.0
+offset_bottom = 131.5
+focus_mode = 0
+texture_normal = ExtResource("16_u7bt3")
+
 [node name="Mute Button" type="Node2D" parent="."]
 process_mode = 3
 position = Vector2(88, 21)
@@ -86,4 +96,5 @@ texture_normal = ExtResource("8_tb4gh")
 texture_pressed = ExtResource("13_c5q7s")
 
 [connection signal="pressed" from="Pause Button/TextureButton" to="Pause Button" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Pause Button/HomeButton" to="Pause Button" method="_on_home_button_pressed"]
 [connection signal="pressed" from="Mute Button/TextureButton" to="Mute Button" method="_on_texture_button_pressed"]
