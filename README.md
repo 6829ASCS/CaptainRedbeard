@@ -3,9 +3,8 @@
 A 2D classic-lego-pirate-themed platformer, heavily inspired by the 2D LEGO® platformers of the mid-2010s and the 1989-1997 LEGO® Pirates theme.
 
 I absolutely loooved the browser-based lego games of the 2010s, so I decided to create one of my own. I created this with no prior experience in godot (and it shows) but I hope you have fun playing this prototype of a game!
-
-**Play it now on Itch.io:**  
-[Captain Redbeard's Adventure](https://alymakesstuff.itch.io/captain-redbeards-adventure)
+  
+[**Play it now on Itch.io:**](https://alymakesstuff.itch.io/captain-redbeards-adventure)
 
 ## Controls
 
